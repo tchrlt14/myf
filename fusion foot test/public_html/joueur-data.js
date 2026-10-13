@@ -1,0 +1,3986 @@
+// Copie de joueur.json (secours quand fetch() est bloqué en file://). Régénérer si joueur.json change.
+window.JOUEUR_DATA = [
+  {
+    "club": "Manchester City",
+    "saison": "2026/2027",
+    "entraineur": "Enzo Maresca",
+    "joueurs": [
+      {
+        "nom": "Gianluigi Donnarumma",
+        "numero": 1,
+        "poste": "Gardien",
+        "nationalite": "Italie",
+        "date_naissance": "1999-02-25"
+      },
+      {
+        "nom": "Marcus Bettinelli",
+        "numero": 13,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "1992-05-24"
+      },
+      {
+        "nom": "Gerónimo Rulli",
+        "numero": 28,
+        "poste": "Gardien",
+        "nationalite": "Argentine",
+        "date_naissance": "1992-05-20"
+      },
+      {
+        "nom": "Max-Edgar Chabot",
+        "numero": 94,
+        "poste": "Gardien",
+        "nationalite": "France",
+        "date_naissance": "2008-04-01"
+      },
+      {
+        "nom": "Rúben Dias",
+        "numero": 3,
+        "poste": "Défenseur",
+        "nationalite": "Portugal",
+        "date_naissance": "1997-05-14"
+      },
+      {
+        "nom": "Marc Guéhi",
+        "numero": 6,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2000-07-13"
+      },
+      {
+        "nom": "Rayan Aït-Nouri",
+        "numero": 21,
+        "poste": "Défenseur",
+        "nationalite": "Algérie",
+        "date_naissance": "2001-06-06"
+      },
+      {
+        "nom": "Vitor Reis",
+        "numero": 22,
+        "poste": "Défenseur",
+        "nationalite": "Brésil",
+        "date_naissance": "2006-01-12"
+      },
+      {
+        "nom": "Joško Gvardiol",
+        "numero": 24,
+        "poste": "Défenseur",
+        "nationalite": "Croatie",
+        "date_naissance": "2002-01-23"
+      },
+      {
+        "nom": "Matheus Nunes",
+        "numero": 27,
+        "poste": "Défenseur",
+        "nationalite": "Portugal",
+        "date_naissance": "1998-08-27"
+      },
+      {
+        "nom": "Abdukodir Khusanov",
+        "numero": 45,
+        "poste": "Défenseur",
+        "nationalite": "Ouzbékistan",
+        "date_naissance": "2004-02-29"
+      },
+      {
+        "nom": "Kaden Braithwaite",
+        "numero": 61,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2008-02-08"
+      },
+      {
+        "nom": "Rico Lewis",
+        "numero": 82,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2004-11-21"
+      },
+      {
+        "nom": "Elliot Anderson",
+        "numero": 5,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2002-11-06"
+      },
+      {
+        "nom": "Mateo Kovačić",
+        "numero": 8,
+        "poste": "Milieu",
+        "nationalite": "Croatie",
+        "date_naissance": "1994-05-06"
+      },
+      {
+        "nom": "Rayan Cherki",
+        "numero": 10,
+        "poste": "Milieu",
+        "nationalite": "France",
+        "date_naissance": "2003-08-17"
+      },
+      {
+        "nom": "Enzo Fernández",
+        "numero": 17,
+        "poste": "Milieu",
+        "nationalite": "Argentine",
+        "date_naissance": "2001-01-17"
+      },
+      {
+        "nom": "Ayyoub Bouaddi",
+        "numero": 32,
+        "poste": "Milieu",
+        "nationalite": "Maroc",
+        "date_naissance": "2007-10-02"
+      },
+      {
+        "nom": "Nico O'Reilly",
+        "numero": 33,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2005-03-21"
+      },
+      {
+        "nom": "Phil Foden",
+        "numero": 47,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2000-05-28"
+      },
+      {
+        "nom": "Floyd Samba",
+        "numero": 75,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2009-01-15"
+      },
+      {
+        "nom": "Iliman Ndiaye",
+        "numero": 7,
+        "poste": "Attaquant",
+        "nationalite": "Sénégal",
+        "date_naissance": "2000-03-06"
+      },
+      {
+        "nom": "Erling Haaland",
+        "numero": 9,
+        "poste": "Attaquant",
+        "nationalite": "Norvège",
+        "date_naissance": "2000-07-21"
+      },
+      {
+        "nom": "Jérémy Doku",
+        "numero": 11,
+        "poste": "Attaquant",
+        "nationalite": "Belgique",
+        "date_naissance": "2002-05-27"
+      },
+      {
+        "nom": "Allan",
+        "numero": 37,
+        "poste": "Attaquant",
+        "nationalite": "Brésil",
+        "date_naissance": "2004-04-19"
+      },
+      {
+        "nom": "Antoine Semenyo",
+        "numero": 42,
+        "poste": "Attaquant",
+        "nationalite": "Ghana",
+        "date_naissance": "2000-01-07"
+      },
+      {
+        "nom": "Ryan McAidoo",
+        "numero": 56,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "2008-06-24"
+      }
+    ]
+  },
+  {
+    "club": "Chelsea",
+    "saison": "2026/2027",
+    "entraineur": "Xabi Alonso",
+    "joueurs": [
+      {
+        "nom": "Robert Sánchez",
+        "numero": 1,
+        "poste": "Gardien",
+        "nationalite": "Espagne",
+        "date_naissance": "1997-11-18"
+      },
+      {
+        "nom": "Filip Jørgensen",
+        "numero": 12,
+        "poste": "Gardien",
+        "nationalite": "Danemark",
+        "date_naissance": "2002-06-03"
+      },
+      {
+        "nom": "Gabriel Slonina",
+        "numero": 44,
+        "poste": "Gardien",
+        "nationalite": "États-Unis",
+        "date_naissance": "2004-05-15"
+      },
+      {
+        "nom": "Teddy Sharman-Lowe",
+        "numero": 28,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "2003-04-30"
+      },
+      {
+        "nom": "Marc Cucurella",
+        "numero": 3,
+        "poste": "Défenseur",
+        "nationalite": "Espagne",
+        "date_naissance": "1998-07-22"
+      },
+      {
+        "nom": "Tosin Adarabioyo",
+        "numero": 4,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1997-09-24"
+      },
+      {
+        "nom": "Benoît Badiashile",
+        "numero": 5,
+        "poste": "Défenseur",
+        "nationalite": "France",
+        "date_naissance": "2001-03-26"
+      },
+      {
+        "nom": "Levi Colwill",
+        "numero": 6,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2003-02-26"
+      },
+      {
+        "nom": "Trevoh Chalobah",
+        "numero": 23,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1999-07-05"
+      },
+      {
+        "nom": "Reece James",
+        "numero": 24,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1999-12-08"
+      },
+      {
+        "nom": "Malo Gusto",
+        "numero": 27,
+        "poste": "Défenseur",
+        "nationalite": "France",
+        "date_naissance": "2003-05-19"
+      },
+      {
+        "nom": "Wesley Fofana",
+        "numero": 29,
+        "poste": "Défenseur",
+        "nationalite": "France",
+        "date_naissance": "2000-12-17"
+      },
+      {
+        "nom": "Jorrel Hato",
+        "numero": 21,
+        "poste": "Défenseur",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "2006-03-07"
+      },
+      {
+        "nom": "Josh Acheampong",
+        "numero": 34,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2006-05-05"
+      },
+      {
+        "nom": "Aaron Anselmino",
+        "numero": 30,
+        "poste": "Défenseur",
+        "nationalite": "Argentine",
+        "date_naissance": "2005-04-29"
+      },
+      {
+        "nom": "Axel Disasi",
+        "numero": 2,
+        "poste": "Défenseur",
+        "nationalite": "France",
+        "date_naissance": "1998-03-11"
+      },
+      {
+        "nom": "Enzo Fernández",
+        "numero": 8,
+        "poste": "Milieu",
+        "nationalite": "Argentine",
+        "date_naissance": "2001-01-17"
+      },
+      {
+        "nom": "Cole Palmer",
+        "numero": 10,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2002-05-06"
+      },
+      {
+        "nom": "Dário Essugo",
+        "numero": 14,
+        "poste": "Milieu",
+        "nationalite": "Portugal",
+        "date_naissance": "2005-02-14"
+      },
+      {
+        "nom": "Andrey Santos",
+        "numero": 17,
+        "poste": "Milieu",
+        "nationalite": "Brésil",
+        "date_naissance": "2004-05-03"
+      },
+      {
+        "nom": "Moises Caicedo",
+        "numero": 25,
+        "poste": "Milieu",
+        "nationalite": "Équateur",
+        "date_naissance": "2001-11-02"
+      },
+      {
+        "nom": "Romeo Lavia",
+        "numero": 45,
+        "poste": "Milieu",
+        "nationalite": "Belgique",
+        "date_naissance": "2004-01-06"
+      },
+      {
+        "nom": "Kiernan Dewsbury-Hall",
+        "numero": 22,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "1998-09-06"
+      },
+      {
+        "nom": "Christopher Nkunku",
+        "numero": 18,
+        "poste": "Milieu",
+        "nationalite": "France",
+        "date_naissance": "1997-11-14"
+      },
+      {
+        "nom": "Pedro Neto",
+        "numero": 7,
+        "poste": "Attaquant",
+        "nationalite": "Portugal",
+        "date_naissance": "2000-03-09"
+      },
+      {
+        "nom": "Liam Delap",
+        "numero": 9,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "2003-02-08"
+      },
+      {
+        "nom": "Jamie Gittens",
+        "numero": 11,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "2004-08-04"
+      },
+      {
+        "nom": "João Pedro",
+        "numero": 20,
+        "poste": "Attaquant",
+        "nationalite": "Brésil",
+        "date_naissance": "2001-09-26"
+      },
+      {
+        "nom": "Tyrique George",
+        "numero": 32,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "2006-02-04"
+      },
+      {
+        "nom": "Estêvão",
+        "numero": 41,
+        "poste": "Attaquant",
+        "nationalite": "Brésil",
+        "date_naissance": "2007-04-24"
+      },
+      {
+        "nom": "Marc Guiu",
+        "numero": 38,
+        "poste": "Attaquant",
+        "nationalite": "Espagne",
+        "date_naissance": "2006-01-04"
+      },
+      {
+        "nom": "Alejandro Garnacho",
+        "numero": 49,
+        "poste": "Attaquant",
+        "nationalite": "Argentine",
+        "date_naissance": "2004-07-01"
+      },
+      {
+        "nom": "David Datro Fofana",
+        "numero": 27,
+        "poste": "Attaquant",
+        "nationalite": "Côte d'Ivoire",
+        "date_naissance": "2002-12-22"
+      },
+      {
+        "nom": "Nicolas Jackson",
+        "numero": 15,
+        "poste": "Attaquant",
+        "nationalite": "Sénégal",
+        "date_naissance": "2001-06-20"
+      }
+    ]
+  },
+  {
+    "club": "Arsenal",
+    "saison": "2026/2027",
+    "entraineur": "Mikel Arteta",
+    "joueurs": [
+      {
+        "nom": "David Raya",
+        "numero": 1,
+        "poste": "Gardien",
+        "nationalite": "Espagne",
+        "date_naissance": "1995-09-15"
+      },
+      {
+        "nom": "Kepa Arrizabalaga",
+        "numero": 13,
+        "poste": "Gardien",
+        "nationalite": "Espagne",
+        "date_naissance": "1994-10-03"
+      },
+      {
+        "nom": "Karl Hein",
+        "numero": 31,
+        "poste": "Gardien",
+        "nationalite": "Estonie",
+        "date_naissance": "2002-04-13"
+      },
+      {
+        "nom": "Tommy Setford",
+        "numero": 35,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "2006-03-13"
+      },
+      {
+        "nom": "William Saliba",
+        "numero": 2,
+        "poste": "Défenseur",
+        "nationalite": "France",
+        "date_naissance": "2001-03-24"
+      },
+      {
+        "nom": "Cristhian Mosquera",
+        "numero": 3,
+        "poste": "Défenseur",
+        "nationalite": "Espagne",
+        "date_naissance": "2004-06-27"
+      },
+      {
+        "nom": "Ben White",
+        "numero": 4,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1997-10-08"
+      },
+      {
+        "nom": "Gabriel Magalhães",
+        "numero": 6,
+        "poste": "Défenseur",
+        "nationalite": "Brésil",
+        "date_naissance": "1997-12-19"
+      },
+      {
+        "nom": "Jurriën Timber",
+        "numero": 12,
+        "poste": "Défenseur",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "2001-06-17"
+      },
+      {
+        "nom": "Jakub Kiwior",
+        "numero": 15,
+        "poste": "Défenseur",
+        "nationalite": "Pologne",
+        "date_naissance": "2000-02-15"
+      },
+      {
+        "nom": "Oleksandr Zinchenko",
+        "numero": 17,
+        "poste": "Défenseur",
+        "nationalite": "Ukraine",
+        "date_naissance": "1996-12-15"
+      },
+      {
+        "nom": "Riccardo Calafiori",
+        "numero": 33,
+        "poste": "Défenseur",
+        "nationalite": "Italie",
+        "date_naissance": "2002-05-19"
+      },
+      {
+        "nom": "Myles Lewis-Skelly",
+        "numero": 49,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2006-09-26"
+      },
+      {
+        "nom": "Piero Hincapié",
+        "numero": 5,
+        "poste": "Défenseur",
+        "nationalite": "Équateur",
+        "date_naissance": "2002-01-09"
+      },
+      {
+        "nom": "Martin Ødegaard",
+        "numero": 8,
+        "poste": "Milieu",
+        "nationalite": "Norvège",
+        "date_naissance": "1998-12-17"
+      },
+      {
+        "nom": "Eberechi Eze",
+        "numero": 10,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "1998-06-29"
+      },
+      {
+        "nom": "Christian Norgaard",
+        "numero": 16,
+        "poste": "Milieu",
+        "nationalite": "Danemark",
+        "date_naissance": "1994-03-10"
+      },
+      {
+        "nom": "Fabio Vieira",
+        "numero": 21,
+        "poste": "Milieu",
+        "nationalite": "Portugal",
+        "date_naissance": "2000-05-30"
+      },
+      {
+        "nom": "Ethan Nwaneri",
+        "numero": 22,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2007-03-21"
+      },
+      {
+        "nom": "Mikel Merino",
+        "numero": 23,
+        "poste": "Milieu",
+        "nationalite": "Espagne",
+        "date_naissance": "1996-06-22"
+      },
+      {
+        "nom": "Albert Sambi Lokonga",
+        "numero": 28,
+        "poste": "Milieu",
+        "nationalite": "Belgique",
+        "date_naissance": "1999-10-22"
+      },
+      {
+        "nom": "Martin Zubimendi",
+        "numero": 36,
+        "poste": "Milieu",
+        "nationalite": "Espagne",
+        "date_naissance": "1999-02-02"
+      },
+      {
+        "nom": "Declan Rice",
+        "numero": 41,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "1999-01-14"
+      },
+      {
+        "nom": "Max Dowman",
+        "numero": 56,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2009-12-31"
+      },
+      {
+        "nom": "Bukayo Saka",
+        "numero": 7,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "2001-09-05"
+      },
+      {
+        "nom": "Gabriel Jesus",
+        "numero": 9,
+        "poste": "Attaquant",
+        "nationalite": "Brésil",
+        "date_naissance": "1997-04-03"
+      },
+      {
+        "nom": "Gabriel Martinelli",
+        "numero": 11,
+        "poste": "Attaquant",
+        "nationalite": "Brésil",
+        "date_naissance": "2001-06-18"
+      },
+      {
+        "nom": "Viktor Gyökeres",
+        "numero": 14,
+        "poste": "Attaquant",
+        "nationalite": "Suède",
+        "date_naissance": "1998-06-04"
+      },
+      {
+        "nom": "Leandro Trossard",
+        "numero": 19,
+        "poste": "Attaquant",
+        "nationalite": "Belgique",
+        "date_naissance": "1994-12-04"
+      },
+      {
+        "nom": "Noni Madueke",
+        "numero": 20,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "2002-03-10"
+      },
+      {
+        "nom": "Reiss Nelson",
+        "numero": 24,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "1999-12-10"
+      },
+      {
+        "nom": "Kai Havertz",
+        "numero": 29,
+        "poste": "Attaquant",
+        "nationalite": "Allemagne",
+        "date_naissance": "1999-06-11"
+      }
+    ]
+  },
+  {
+    "club": "Manchester United",
+    "saison": "2026/2027",
+    "entraineur": "Rúben Amorim",
+    "joueurs": [
+      {
+        "nom": "André Onana",
+        "numero": 1,
+        "poste": "Gardien",
+        "nationalite": "Cameroun",
+        "date_naissance": "1996-04-02"
+      },
+      {
+        "nom": "Altay Bayındır",
+        "numero": 24,
+        "poste": "Gardien",
+        "nationalite": "Turquie",
+        "date_naissance": "1998-01-14"
+      },
+      {
+        "nom": "Tom Heaton",
+        "numero": 22,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "1986-04-15"
+      },
+      {
+        "nom": "Senne Lammens",
+        "numero": 17,
+        "poste": "Gardien",
+        "nationalite": "Belgique",
+        "date_naissance": "2002-08-13"
+      },
+      {
+        "nom": "Diogo Dalot",
+        "numero": 20,
+        "poste": "Défenseur",
+        "nationalite": "Portugal",
+        "date_naissance": "1999-03-18"
+      },
+      {
+        "nom": "Noussair Mazraoui",
+        "numero": 3,
+        "poste": "Défenseur",
+        "nationalite": "Maroc",
+        "date_naissance": "1997-11-14"
+      },
+      {
+        "nom": "Matthijs de Ligt",
+        "numero": 4,
+        "poste": "Défenseur",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "1999-08-12"
+      },
+      {
+        "nom": "Harry Maguire",
+        "numero": 5,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1993-03-05"
+      },
+      {
+        "nom": "Lisandro Martínez",
+        "numero": 6,
+        "poste": "Défenseur",
+        "nationalite": "Argentine",
+        "date_naissance": "1998-01-18"
+      },
+      {
+        "nom": "Leny Yoro",
+        "numero": 15,
+        "poste": "Défenseur",
+        "nationalite": "France",
+        "date_naissance": "2005-11-13"
+      },
+      {
+        "nom": "Luke Shaw",
+        "numero": 23,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1995-07-12"
+      },
+      {
+        "nom": "Tyrell Malacia",
+        "numero": 12,
+        "poste": "Défenseur",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "1999-08-17"
+      },
+      {
+        "nom": "Patrick Dorgu",
+        "numero": 13,
+        "poste": "Défenseur",
+        "nationalite": "Danemark",
+        "date_naissance": "2004-10-24"
+      },
+      {
+        "nom": "Ayden Heaven",
+        "numero": 26,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2006-09-22"
+      },
+      {
+        "nom": "Harry Amass",
+        "numero": 41,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2007-03-16"
+      },
+      {
+        "nom": "Bruno Fernandes",
+        "numero": 8,
+        "poste": "Milieu",
+        "nationalite": "Portugal",
+        "date_naissance": "1994-09-08"
+      },
+      {
+        "nom": "Casemiro",
+        "numero": 18,
+        "poste": "Milieu",
+        "nationalite": "Brésil",
+        "date_naissance": "1992-02-23"
+      },
+      {
+        "nom": "Manuel Ugarte",
+        "numero": 25,
+        "poste": "Milieu",
+        "nationalite": "Uruguay",
+        "date_naissance": "2001-04-11"
+      },
+      {
+        "nom": "Kobbie Mainoo",
+        "numero": 37,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2005-04-19"
+      },
+      {
+        "nom": "Mason Mount",
+        "numero": 7,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "1999-01-10"
+      },
+      {
+        "nom": "Toby Collyer",
+        "numero": 43,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2004-02-03"
+      },
+      {
+        "nom": "Rasmus Højlund",
+        "numero": 9,
+        "poste": "Attaquant",
+        "nationalite": "Danemark",
+        "date_naissance": "2003-02-04"
+      },
+      {
+        "nom": "Joshua Zirkzee",
+        "numero": 11,
+        "poste": "Attaquant",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "2001-05-22"
+      },
+      {
+        "nom": "Amad Diallo",
+        "numero": 16,
+        "poste": "Attaquant",
+        "nationalite": "Côte d'Ivoire",
+        "date_naissance": "2002-07-11"
+      },
+      {
+        "nom": "Bryan Mbeumo",
+        "numero": 19,
+        "poste": "Attaquant",
+        "nationalite": "Cameroun",
+        "date_naissance": "1999-08-07"
+      },
+      {
+        "nom": "Matheus Cunha",
+        "numero": 10,
+        "poste": "Attaquant",
+        "nationalite": "Brésil",
+        "date_naissance": "1999-05-27"
+      },
+      {
+        "nom": "Benjamin Šeško",
+        "numero": 30,
+        "poste": "Attaquant",
+        "nationalite": "Slovénie",
+        "date_naissance": "2003-05-31"
+      },
+      {
+        "nom": "Chido Obi",
+        "numero": 56,
+        "poste": "Attaquant",
+        "nationalite": "Danemark",
+        "date_naissance": "2007-11-29"
+      }
+    ]
+  },
+  {
+    "club": "Liverpool",
+    "saison": "2026/2027",
+    "entraineur": "Andoni Iraola",
+    "joueurs": [
+      {
+        "nom": "Alisson Becker",
+        "numero": 1,
+        "poste": "Gardien",
+        "nationalite": "Brésil",
+        "date_naissance": "1992-10-02"
+      },
+      {
+        "nom": "Giorgi Mamardashvili",
+        "numero": 25,
+        "poste": "Gardien",
+        "nationalite": "Géorgie",
+        "date_naissance": "2000-09-29"
+      },
+      {
+        "nom": "Freddie Woodman",
+        "numero": 28,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "1997-03-04"
+      },
+      {
+        "nom": "Vitezslav Jaros",
+        "numero": 56,
+        "poste": "Gardien",
+        "nationalite": "Tchéquie",
+        "date_naissance": "2001-07-23"
+      },
+      {
+        "nom": "Joe Gomez",
+        "numero": 2,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1997-05-23"
+      },
+      {
+        "nom": "Virgil van Dijk",
+        "numero": 4,
+        "poste": "Défenseur",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "1991-07-08"
+      },
+      {
+        "nom": "Jeremy Jacquet",
+        "numero": 5,
+        "poste": "Défenseur",
+        "nationalite": "France",
+        "date_naissance": "2005-07-13"
+      },
+      {
+        "nom": "Milos Kerkez",
+        "numero": 6,
+        "poste": "Défenseur",
+        "nationalite": "Hongrie",
+        "date_naissance": "2003-11-07"
+      },
+      {
+        "nom": "Conor Bradley",
+        "numero": 12,
+        "poste": "Défenseur",
+        "nationalite": "Irlande du Nord",
+        "date_naissance": "2003-07-09"
+      },
+      {
+        "nom": "Giovanni Leoni",
+        "numero": 15,
+        "poste": "Défenseur",
+        "nationalite": "Italie",
+        "date_naissance": "2006-12-21"
+      },
+      {
+        "nom": "Kostas Tsimikas",
+        "numero": 21,
+        "poste": "Défenseur",
+        "nationalite": "Grèce",
+        "date_naissance": "1996-05-12"
+      },
+      {
+        "nom": "Jeremie Frimpong",
+        "numero": 30,
+        "poste": "Défenseur",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "2000-12-10"
+      },
+      {
+        "nom": "Ronald Araujo",
+        "numero": 33,
+        "poste": "Défenseur",
+        "nationalite": "Uruguay",
+        "date_naissance": "1999-03-07"
+      },
+      {
+        "nom": "Luke Chambers",
+        "numero": 44,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2004-06-24"
+      },
+      {
+        "nom": "Wataru Endo",
+        "numero": 3,
+        "poste": "Milieu",
+        "nationalite": "Japon",
+        "date_naissance": "1993-02-09"
+      },
+      {
+        "nom": "Florian Wirtz",
+        "numero": 7,
+        "poste": "Milieu",
+        "nationalite": "Allemagne",
+        "date_naissance": "2003-05-03"
+      },
+      {
+        "nom": "Dominik Szoboszlai",
+        "numero": 8,
+        "poste": "Milieu",
+        "nationalite": "Hongrie",
+        "date_naissance": "2000-10-25"
+      },
+      {
+        "nom": "Alexis Mac Allister",
+        "numero": 10,
+        "poste": "Milieu",
+        "nationalite": "Argentine",
+        "date_naissance": "1998-12-24"
+      },
+      {
+        "nom": "Ryan Gravenberch",
+        "numero": 38,
+        "poste": "Milieu",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "2002-05-16"
+      },
+      {
+        "nom": "Trey Nyoni",
+        "numero": 42,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2007-06-30"
+      },
+      {
+        "nom": "James McConnell",
+        "numero": 53,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2004-09-13"
+      },
+      {
+        "nom": "Alexander Isak",
+        "numero": 9,
+        "poste": "Attaquant",
+        "nationalite": "Suède",
+        "date_naissance": "1999-09-21"
+      },
+      {
+        "nom": "Federico Chiesa",
+        "numero": 14,
+        "poste": "Attaquant",
+        "nationalite": "Italie",
+        "date_naissance": "1997-10-25"
+      },
+      {
+        "nom": "Cody Gakpo",
+        "numero": 18,
+        "poste": "Attaquant",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "1999-05-07"
+      },
+      {
+        "nom": "Hugo Ekitike",
+        "numero": 22,
+        "poste": "Attaquant",
+        "nationalite": "France",
+        "date_naissance": "2002-06-20"
+      },
+      {
+        "nom": "Victor Munoz",
+        "numero": 23,
+        "poste": "Attaquant",
+        "nationalite": "Espagne",
+        "date_naissance": "2003-01-01"
+      },
+      {
+        "nom": "Bradley Barcola",
+        "numero": 29,
+        "poste": "Attaquant",
+        "nationalite": "France",
+        "date_naissance": "2002-09-02"
+      },
+      {
+        "nom": "Lewis Koumas",
+        "numero": 67,
+        "poste": "Attaquant",
+        "nationalite": "Pays de Galles",
+        "date_naissance": "2005-09-19"
+      },
+      {
+        "nom": "Rio Ngumoha",
+        "numero": 73,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "2008-05-20"
+      }
+    ]
+  },
+  {
+    "club": "Tottenham Hotspur",
+    "saison": "2026/2027",
+    "entraineur": "Roberto De Zerbi",
+    "joueurs": [
+      {
+        "nom": "Antonín Kinský",
+        "numero": 31,
+        "poste": "Gardien",
+        "nationalite": "Tchéquie",
+        "date_naissance": "2003-03-13"
+      },
+      {
+        "nom": "Martin Dúbravka",
+        "numero": 39,
+        "poste": "Gardien",
+        "nationalite": "Slovaquie",
+        "date_naissance": "1989-01-15"
+      },
+      {
+        "nom": "Brandon Austin",
+        "numero": 40,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "1999-01-08"
+      },
+      {
+        "nom": "Andy Robertson",
+        "numero": 3,
+        "poste": "Défenseur",
+        "nationalite": "Écosse",
+        "date_naissance": "1994-03-11"
+      },
+      {
+        "nom": "Kevin Danso",
+        "numero": 4,
+        "poste": "Défenseur",
+        "nationalite": "Autriche",
+        "date_naissance": "1998-09-19"
+      },
+      {
+        "nom": "Marcos Senesi",
+        "numero": 5,
+        "poste": "Défenseur",
+        "nationalite": "Argentine",
+        "date_naissance": "1997-05-10"
+      },
+      {
+        "nom": "Jan Paul van Hecke",
+        "numero": 6,
+        "poste": "Défenseur",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "2000-06-08"
+      },
+      {
+        "nom": "Destiny Udogie",
+        "numero": 13,
+        "poste": "Défenseur",
+        "nationalite": "Italie",
+        "date_naissance": "2002-11-28"
+      },
+      {
+        "nom": "Pedro Porro",
+        "numero": 23,
+        "poste": "Défenseur",
+        "nationalite": "Espagne",
+        "date_naissance": "1999-09-13"
+      },
+      {
+        "nom": "Kōta Takai",
+        "numero": 25,
+        "poste": "Défenseur",
+        "nationalite": "Japon",
+        "date_naissance": "2004-09-04"
+      },
+      {
+        "nom": "Ben Davies",
+        "numero": 33,
+        "poste": "Défenseur",
+        "nationalite": "Pays de Galles",
+        "date_naissance": "1993-04-24"
+      },
+      {
+        "nom": "Micky van de Ven",
+        "numero": 37,
+        "poste": "Défenseur",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "2001-04-19"
+      },
+      {
+        "nom": "Xavi Simons",
+        "numero": 7,
+        "poste": "Milieu",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "2003-04-21"
+      },
+      {
+        "nom": "Conor Gallagher",
+        "numero": 8,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2000-02-06"
+      },
+      {
+        "nom": "James Maddison",
+        "numero": 10,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "1996-11-23"
+      },
+      {
+        "nom": "Archie Gray",
+        "numero": 14,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2006-03-12"
+      },
+      {
+        "nom": "Lucas Bergvall",
+        "numero": 15,
+        "poste": "Milieu",
+        "nationalite": "Suède",
+        "date_naissance": "2006-02-02"
+      },
+      {
+        "nom": "Sandro Tonali",
+        "numero": 16,
+        "poste": "Milieu",
+        "nationalite": "Italie",
+        "date_naissance": "2000-05-08"
+      },
+      {
+        "nom": "Mateus Fernandes",
+        "numero": 18,
+        "poste": "Milieu",
+        "nationalite": "Portugal",
+        "date_naissance": "2004-07-10"
+      },
+      {
+        "nom": "Dejan Kulusevski",
+        "numero": 21,
+        "poste": "Milieu",
+        "nationalite": "Suède",
+        "date_naissance": "2000-04-25"
+      },
+      {
+        "nom": "Pape Matar Sarr",
+        "numero": 29,
+        "poste": "Milieu",
+        "nationalite": "Sénégal",
+        "date_naissance": "2002-09-14"
+      },
+      {
+        "nom": "Rodrigo Bentancur",
+        "numero": 30,
+        "poste": "Milieu",
+        "nationalite": "Uruguay",
+        "date_naissance": "1997-06-25"
+      },
+      {
+        "nom": "Richarlison",
+        "numero": 9,
+        "poste": "Attaquant",
+        "nationalite": "Brésil",
+        "date_naissance": "1997-05-10"
+      },
+      {
+        "nom": "Mathys Tel",
+        "numero": 11,
+        "poste": "Attaquant",
+        "nationalite": "France",
+        "date_naissance": "2005-04-27"
+      },
+      {
+        "nom": "Dominic Solanke",
+        "numero": 19,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "1997-09-14"
+      },
+      {
+        "nom": "Mohammed Kudus",
+        "numero": 20,
+        "poste": "Attaquant",
+        "nationalite": "Ghana",
+        "date_naissance": "2000-08-02"
+      },
+      {
+        "nom": "Wilson Odobert",
+        "numero": 28,
+        "poste": "Attaquant",
+        "nationalite": "France",
+        "date_naissance": "2004-11-28"
+      },
+      {
+        "nom": "Mikey Moore",
+        "numero": 47,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "2007-08-11"
+      }
+    ]
+  },
+  {
+    "club": "Brighton & Hove Albion",
+    "saison": "2026/2027",
+    "entraineur": "Fabian Hürzeler",
+    "joueurs": [
+      {
+        "nom": "Bart Verbruggen",
+        "numero": 1,
+        "poste": "Gardien",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "2002-08-18"
+      },
+      {
+        "nom": "Jason Steele",
+        "numero": 23,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "1990-08-18"
+      },
+      {
+        "nom": "Tom McGill",
+        "numero": 38,
+        "poste": "Gardien",
+        "nationalite": "Canada",
+        "date_naissance": "2000-03-25"
+      },
+      {
+        "nom": "Igor Julio",
+        "numero": 3,
+        "poste": "Défenseur",
+        "nationalite": "Brésil",
+        "date_naissance": "1998-02-07"
+      },
+      {
+        "nom": "Pascal Struijk",
+        "numero": 4,
+        "poste": "Défenseur",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "1999-08-11"
+      },
+      {
+        "nom": "Lewis Dunk",
+        "numero": 5,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1991-11-21"
+      },
+      {
+        "nom": "Joao Costinha",
+        "numero": 20,
+        "poste": "Défenseur",
+        "nationalite": "Portugal",
+        "date_naissance": "2000-03-26"
+      },
+      {
+        "nom": "Olivier Boscagli",
+        "numero": 21,
+        "poste": "Défenseur",
+        "nationalite": "France",
+        "date_naissance": "1997-11-18"
+      },
+      {
+        "nom": "Ferdi Kadioglu",
+        "numero": 24,
+        "poste": "Défenseur",
+        "nationalite": "Turquie",
+        "date_naissance": "1999-10-07"
+      },
+      {
+        "nom": "Maxim De Cuyper",
+        "numero": 29,
+        "poste": "Défenseur",
+        "nationalite": "Belgique",
+        "date_naissance": "2000-12-22"
+      },
+      {
+        "nom": "Michael Svoboda",
+        "numero": 30,
+        "poste": "Défenseur",
+        "nationalite": "Autriche",
+        "date_naissance": "1998-10-15"
+      },
+      {
+        "nom": "Luka Vuskovic",
+        "numero": 44,
+        "poste": "Défenseur",
+        "nationalite": "Croatie",
+        "date_naissance": "2007-02-24"
+      },
+      {
+        "nom": "Jack Hinshelwood",
+        "numero": 8,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2005-04-11"
+      },
+      {
+        "nom": "Pascal Gross",
+        "numero": 13,
+        "poste": "Milieu",
+        "nationalite": "Allemagne",
+        "date_naissance": "1991-06-15"
+      },
+      {
+        "nom": "Diego Gomez",
+        "numero": 25,
+        "poste": "Milieu",
+        "nationalite": "Paraguay",
+        "date_naissance": "2003-03-27"
+      },
+      {
+        "nom": "Yasin Ayari",
+        "numero": 26,
+        "poste": "Milieu",
+        "nationalite": "Suède",
+        "date_naissance": "2003-10-06"
+      },
+      {
+        "nom": "Mats Wieffer",
+        "numero": 27,
+        "poste": "Milieu",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "1999-11-16"
+      },
+      {
+        "nom": "Matt O'Riley",
+        "numero": 33,
+        "poste": "Milieu",
+        "nationalite": "Danemark",
+        "date_naissance": "2000-11-21"
+      },
+      {
+        "nom": "Malick Yalcouye",
+        "numero": 35,
+        "poste": "Milieu",
+        "nationalite": "Mali",
+        "date_naissance": "2005-11-18"
+      },
+      {
+        "nom": "Kaoru Mitoma",
+        "numero": 7,
+        "poste": "Attaquant",
+        "nationalite": "Japon",
+        "date_naissance": "1997-05-20"
+      },
+      {
+        "nom": "Stefanos Tzimas",
+        "numero": 9,
+        "poste": "Attaquant",
+        "nationalite": "Grèce",
+        "date_naissance": "2006-01-06"
+      },
+      {
+        "nom": "Georginio Rutter",
+        "numero": 10,
+        "poste": "Attaquant",
+        "nationalite": "France",
+        "date_naissance": "2002-04-20"
+      },
+      {
+        "nom": "Yankuba Minteh",
+        "numero": 11,
+        "poste": "Attaquant",
+        "nationalite": "Gambie",
+        "date_naissance": "2004-07-22"
+      },
+      {
+        "nom": "Promise David",
+        "numero": 12,
+        "poste": "Attaquant",
+        "nationalite": "Canada",
+        "date_naissance": "2001-07-03"
+      },
+      {
+        "nom": "Ibrahim Osman",
+        "numero": 15,
+        "poste": "Attaquant",
+        "nationalite": "Ghana",
+        "date_naissance": "2004-11-29"
+      },
+      {
+        "nom": "Charalampos Kostoulas",
+        "numero": 19,
+        "poste": "Attaquant",
+        "nationalite": "Grèce",
+        "date_naissance": "2007-05-30"
+      },
+      {
+        "nom": "Amario Cozier-Duberry",
+        "numero": 22,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "2004-11-28"
+      },
+      {
+        "nom": "Evan Ferguson",
+        "numero": 28,
+        "poste": "Attaquant",
+        "nationalite": "Irlande",
+        "date_naissance": "2004-10-19"
+      },
+      {
+        "nom": "Zadok Yohanna",
+        "numero": 36,
+        "poste": "Attaquant",
+        "nationalite": "Nigeria",
+        "date_naissance": "2007-06-29"
+      }
+    ]
+  },
+  {
+    "club": "Newcastle United",
+    "saison": "2026/2027",
+    "entraineur": "Matthias Jaissle",
+    "joueurs": [
+      {
+        "nom": "Nick Pope",
+        "numero": 1,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "1992-04-19"
+      },
+      {
+        "nom": "Lukás Hornícek",
+        "numero": 21,
+        "poste": "Gardien",
+        "nationalite": "Tchéquie",
+        "date_naissance": "2002-07-13"
+      },
+      {
+        "nom": "Ewen Jaouen",
+        "numero": 24,
+        "poste": "Gardien",
+        "nationalite": "France",
+        "date_naissance": "2005-12-29"
+      },
+      {
+        "nom": "Mark Gillespie",
+        "numero": 29,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "1992-03-27"
+      },
+      {
+        "nom": "Tino Livramento",
+        "numero": 2,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2002-11-12"
+      },
+      {
+        "nom": "Lewis Hall",
+        "numero": 3,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2004-09-08"
+      },
+      {
+        "nom": "Sven Botman",
+        "numero": 4,
+        "poste": "Défenseur",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "2000-01-12"
+      },
+      {
+        "nom": "Fabian Schär",
+        "numero": 5,
+        "poste": "Défenseur",
+        "nationalite": "Suisse",
+        "date_naissance": "1991-12-20"
+      },
+      {
+        "nom": "Malick Thiaw",
+        "numero": 12,
+        "poste": "Défenseur",
+        "nationalite": "Allemagne",
+        "date_naissance": "2001-08-08"
+      },
+      {
+        "nom": "Dan Burn",
+        "numero": 33,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1992-05-09"
+      },
+      {
+        "nom": "Amar Dedic",
+        "numero": 37,
+        "poste": "Défenseur",
+        "nationalite": "Bosnie-Herzégovine",
+        "date_naissance": "2002-08-18"
+      },
+      {
+        "nom": "Leo Shahar",
+        "numero": 51,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2007-01-01"
+      },
+      {
+        "nom": "Joelinton",
+        "numero": 7,
+        "poste": "Milieu",
+        "nationalite": "Brésil",
+        "date_naissance": "1996-08-14"
+      },
+      {
+        "nom": "Aladji Bamba",
+        "numero": 8,
+        "poste": "Milieu",
+        "nationalite": "France",
+        "date_naissance": "2006-07-14"
+      },
+      {
+        "nom": "Sean Steur",
+        "numero": 14,
+        "poste": "Milieu",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "2008-01-01"
+      },
+      {
+        "nom": "Jacob Murphy",
+        "numero": 23,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "1995-02-24"
+      },
+      {
+        "nom": "Joe Willock",
+        "numero": 28,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "1999-08-20"
+      },
+      {
+        "nom": "Bruno Guimarães",
+        "numero": 39,
+        "poste": "Milieu",
+        "nationalite": "Brésil",
+        "date_naissance": "1997-11-16"
+      },
+      {
+        "nom": "Jacob Ramsey",
+        "numero": 41,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2001-05-28"
+      },
+      {
+        "nom": "Nico González",
+        "numero": 6,
+        "poste": "Milieu",
+        "nationalite": "Espagne",
+        "date_naissance": "2002-01-03"
+      },
+      {
+        "nom": "Lewis Miley",
+        "numero": 67,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2006-05-01"
+      },
+      {
+        "nom": "Harvey Barnes",
+        "numero": 11,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "1997-12-09"
+      },
+      {
+        "nom": "Anthony Elanga",
+        "numero": 19,
+        "poste": "Attaquant",
+        "nationalite": "Suède",
+        "date_naissance": "2002-04-27"
+      },
+      {
+        "nom": "Yoane Wissa",
+        "numero": 9,
+        "poste": "Attaquant",
+        "nationalite": "RD Congo",
+        "date_naissance": "1996-09-03"
+      },
+      {
+        "nom": "William Osula",
+        "numero": 10,
+        "poste": "Attaquant",
+        "nationalite": "Danemark",
+        "date_naissance": "2003-08-04"
+      },
+      {
+        "nom": "Nick Woltemade",
+        "numero": 27,
+        "poste": "Attaquant",
+        "nationalite": "Allemagne",
+        "date_naissance": "2002-02-14"
+      },
+      {
+        "nom": "Bazoumana Touré",
+        "numero": 17,
+        "poste": "Attaquant",
+        "nationalite": "Côte d'Ivoire",
+        "date_naissance": "2006-03-02"
+      }
+    ]
+  },
+  {
+    "club": "Aston Villa",
+    "saison": "2026/2027",
+    "entraineur": "Unai Emery",
+    "joueurs": [
+      {
+        "nom": "Zion Suzuki",
+        "numero": 1,
+        "poste": "Gardien",
+        "nationalite": "Japon",
+        "date_naissance": "2002-08-21"
+      },
+      {
+        "nom": "Marco Bizot",
+        "numero": 40,
+        "poste": "Gardien",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "1991-03-10"
+      },
+      {
+        "nom": "James Wright",
+        "numero": 42,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "2004-12-02"
+      },
+      {
+        "nom": "Matty Cash",
+        "numero": 2,
+        "poste": "Défenseur",
+        "nationalite": "Pologne",
+        "date_naissance": "1997-08-07"
+      },
+      {
+        "nom": "Victor Lindelöf",
+        "numero": 3,
+        "poste": "Défenseur",
+        "nationalite": "Suède",
+        "date_naissance": "1994-07-17"
+      },
+      {
+        "nom": "Taylor Harwood-Bellis",
+        "numero": 4,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2002-01-30"
+      },
+      {
+        "nom": "Tyrone Mings",
+        "numero": 5,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1993-03-13"
+      },
+      {
+        "nom": "Pau Torres",
+        "numero": 14,
+        "poste": "Défenseur",
+        "nationalite": "Espagne",
+        "date_naissance": "1997-01-16"
+      },
+      {
+        "nom": "Matteo Ruggeri",
+        "numero": 13,
+        "poste": "Défenseur",
+        "nationalite": "Italie",
+        "date_naissance": "2002-07-11"
+      },
+      {
+        "nom": "Ian Maatsen",
+        "numero": 22,
+        "poste": "Défenseur",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "2002-03-10"
+      },
+      {
+        "nom": "Aaron Wan-Bissaka",
+        "numero": 29,
+        "poste": "Défenseur",
+        "nationalite": "RD Congo",
+        "date_naissance": "1997-11-26"
+      },
+      {
+        "nom": "Modou Kéba Cissé",
+        "numero": 48,
+        "poste": "Défenseur",
+        "nationalite": "Sénégal",
+        "date_naissance": "2005-08-04"
+      },
+      {
+        "nom": "Ross Barkley",
+        "numero": 6,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "1993-12-05"
+      },
+      {
+        "nom": "John McGinn",
+        "numero": 7,
+        "poste": "Milieu",
+        "nationalite": "Écosse",
+        "date_naissance": "1994-10-18"
+      },
+      {
+        "nom": "Boubacar Kamara",
+        "numero": 8,
+        "poste": "Milieu",
+        "nationalite": "France",
+        "date_naissance": "1999-11-23"
+      },
+      {
+        "nom": "Emiliano Buendía",
+        "numero": 10,
+        "poste": "Milieu",
+        "nationalite": "Argentine",
+        "date_naissance": "1996-12-25"
+      },
+      {
+        "nom": "Amadou Onana",
+        "numero": 24,
+        "poste": "Milieu",
+        "nationalite": "Belgique",
+        "date_naissance": "2001-08-16"
+      },
+      {
+        "nom": "Lamare Bogarde",
+        "numero": 26,
+        "poste": "Milieu",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "2004-01-05"
+      },
+      {
+        "nom": "Leon Goretzka",
+        "numero": 27,
+        "poste": "Milieu",
+        "nationalite": "Allemagne",
+        "date_naissance": "1995-02-06"
+      },
+      {
+        "nom": "João Gomes",
+        "numero": 35,
+        "poste": "Milieu",
+        "nationalite": "Brésil",
+        "date_naissance": "2001-02-12"
+      },
+      {
+        "nom": "Johan Manzambi",
+        "numero": 44,
+        "poste": "Milieu",
+        "nationalite": "Suisse",
+        "date_naissance": "2005-10-14"
+      },
+      {
+        "nom": "George Hemmings",
+        "numero": 53,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2007-03-04"
+      },
+      {
+        "nom": "Ibrahim Mbaye",
+        "numero": 19,
+        "poste": "Attaquant",
+        "nationalite": "Sénégal",
+        "date_naissance": "2008-01-24"
+      },
+      {
+        "nom": "Alysson Edward",
+        "numero": 47,
+        "poste": "Attaquant",
+        "nationalite": "Brésil",
+        "date_naissance": "2006-05-05"
+      },
+      {
+        "nom": "Alejandro Garnacho",
+        "numero": 17,
+        "poste": "Attaquant",
+        "nationalite": "Argentine",
+        "date_naissance": "2004-07-01"
+      },
+      {
+        "nom": "Nicolas Jackson",
+        "numero": 11,
+        "poste": "Attaquant",
+        "nationalite": "Sénégal",
+        "date_naissance": "2001-06-20"
+      },
+      {
+        "nom": "Tammy Abraham",
+        "numero": 18,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "1997-10-02"
+      },
+      {
+        "nom": "Brian Madjo",
+        "numero": 39,
+        "poste": "Attaquant",
+        "nationalite": "Luxembourg",
+        "date_naissance": "2009-01-12"
+      },
+      {
+        "nom": "Leon Bailey",
+        "numero": 31,
+        "poste": "Attaquant",
+        "nationalite": "Jamaïque",
+        "date_naissance": "1997-08-09"
+      }
+    ]
+  },
+  {
+    "club": "Fulham",
+    "saison": "2026/2027",
+    "entraineur": "Álvaro Arbeloa",
+    "joueurs": [
+      {
+        "nom": "Bernd Leno",
+        "numero": 1,
+        "poste": "Gardien",
+        "nationalite": "Allemagne",
+        "date_naissance": "1992-03-04"
+      },
+      {
+        "nom": "Benjamin Lecomte",
+        "numero": 23,
+        "poste": "Gardien",
+        "nationalite": "France",
+        "date_naissance": "1991-04-26"
+      },
+      {
+        "nom": "Alex Borto",
+        "numero": 36,
+        "poste": "Gardien",
+        "nationalite": "États-Unis",
+        "date_naissance": "2003-11-06"
+      },
+      {
+        "nom": "Dino Kaiser",
+        "numero": 37,
+        "poste": "Gardien",
+        "nationalite": "Allemagne",
+        "date_naissance": "2007-01-01"
+      },
+      {
+        "nom": "Michael Allen",
+        "numero": 39,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "2004-01-01"
+      },
+      {
+        "nom": "Kenny Tete",
+        "numero": 2,
+        "poste": "Défenseur",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "1995-10-09"
+      },
+      {
+        "nom": "Calvin Bassey",
+        "numero": 3,
+        "poste": "Défenseur",
+        "nationalite": "Nigeria",
+        "date_naissance": "1999-12-31"
+      },
+      {
+        "nom": "Jorge Cuenca",
+        "numero": 4,
+        "poste": "Défenseur",
+        "nationalite": "Espagne",
+        "date_naissance": "1999-11-17"
+      },
+      {
+        "nom": "Joachim Andersen",
+        "numero": 5,
+        "poste": "Défenseur",
+        "nationalite": "Danemark",
+        "date_naissance": "1996-05-31"
+      },
+      {
+        "nom": "Timothy Castagne",
+        "numero": 21,
+        "poste": "Défenseur",
+        "nationalite": "Belgique",
+        "date_naissance": "1995-12-05"
+      },
+      {
+        "nom": "Ryan Sessegnon",
+        "numero": 30,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2000-05-18"
+      },
+      {
+        "nom": "Antonee Robinson",
+        "numero": 33,
+        "poste": "Défenseur",
+        "nationalite": "États-Unis",
+        "date_naissance": "1997-08-08"
+      },
+      {
+        "nom": "Luc De Fougerolles",
+        "numero": 44,
+        "poste": "Défenseur",
+        "nationalite": "Canada",
+        "date_naissance": "2005-01-01"
+      },
+      {
+        "nom": "Harrison Reed",
+        "numero": 6,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "1995-01-27"
+      },
+      {
+        "nom": "César Palacios",
+        "numero": 8,
+        "poste": "Milieu",
+        "nationalite": "Espagne",
+        "date_naissance": "2004-11-11"
+      },
+      {
+        "nom": "Tom Cairney",
+        "numero": 10,
+        "poste": "Milieu",
+        "nationalite": "Écosse",
+        "date_naissance": "1991-01-20"
+      },
+      {
+        "nom": "Oscar Bobb",
+        "numero": 14,
+        "poste": "Milieu",
+        "nationalite": "Norvège",
+        "date_naissance": "2003-07-12"
+      },
+      {
+        "nom": "Sander Berge",
+        "numero": 16,
+        "poste": "Milieu",
+        "nationalite": "Norvège",
+        "date_naissance": "1998-02-14"
+      },
+      {
+        "nom": "Alex Iwobi",
+        "numero": 17,
+        "poste": "Milieu",
+        "nationalite": "Nigeria",
+        "date_naissance": "1996-05-03"
+      },
+      {
+        "nom": "Shea Charles",
+        "numero": 19,
+        "poste": "Milieu",
+        "nationalite": "Irlande du Nord",
+        "date_naissance": "2003-11-05"
+      },
+      {
+        "nom": "Josh King",
+        "numero": 24,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2007-01-03"
+      },
+      {
+        "nom": "Emile Smith Rowe",
+        "numero": 32,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2000-07-28"
+      },
+      {
+        "nom": "Gonzalo García",
+        "numero": 7,
+        "poste": "Attaquant",
+        "nationalite": "Espagne",
+        "date_naissance": "2004-03-24"
+      },
+      {
+        "nom": "Rodrigo Muniz",
+        "numero": 9,
+        "poste": "Attaquant",
+        "nationalite": "Brésil",
+        "date_naissance": "2001-05-04"
+      },
+      {
+        "nom": "Kevin",
+        "numero": 11,
+        "poste": "Attaquant",
+        "nationalite": "Brésil",
+        "date_naissance": "2003-01-04"
+      },
+      {
+        "nom": "Jonah Kusi-Asare",
+        "numero": 18,
+        "poste": "Attaquant",
+        "nationalite": "Suède",
+        "date_naissance": "2007-07-04"
+      }
+    ]
+  },
+  {
+    "club": "Hull City",
+    "saison": "2026/2027",
+    "entraineur": "Sergej Jakirović",
+    "joueurs": [
+      {
+        "nom": "Jack Butland",
+        "numero": 1,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "1993-03-10"
+      },
+      {
+        "nom": "Dillon Phillips",
+        "numero": 12,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "1995-06-11"
+      },
+      {
+        "nom": "Konstantinos Tzolakis",
+        "numero": 19,
+        "poste": "Gardien",
+        "nationalite": "Grèce",
+        "date_naissance": "2002-11-08"
+      },
+      {
+        "nom": "Lewie Coyle",
+        "numero": 2,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1995-10-15"
+      },
+      {
+        "nom": "Ryan Giles",
+        "numero": 3,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2000-01-26"
+      },
+      {
+        "nom": "Charlie Hughes",
+        "numero": 4,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2003-10-16"
+      },
+      {
+        "nom": "Semi Ajayi",
+        "numero": 6,
+        "poste": "Défenseur",
+        "nationalite": "Nigeria",
+        "date_naissance": "1993-11-09"
+      },
+      {
+        "nom": "John Egan",
+        "numero": 15,
+        "poste": "Défenseur",
+        "nationalite": "Irlande",
+        "date_naissance": "1992-10-20"
+      },
+      {
+        "nom": "Paddy McNair",
+        "numero": 17,
+        "poste": "Défenseur",
+        "nationalite": "Irlande du Nord",
+        "date_naissance": "1995-04-27"
+      },
+      {
+        "nom": "Lucas Herrington",
+        "numero": 22,
+        "poste": "Défenseur",
+        "nationalite": "Australie",
+        "date_naissance": "2006-01-01"
+      },
+      {
+        "nom": "Matt Targett",
+        "numero": 23,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1995-09-18"
+      },
+      {
+        "nom": "Nobel Mendy",
+        "numero": 32,
+        "poste": "Défenseur",
+        "nationalite": "Sénégal",
+        "date_naissance": "2004-01-01"
+      },
+      {
+        "nom": "Hidemasa Morita",
+        "numero": 5,
+        "poste": "Milieu",
+        "nationalite": "Japon",
+        "date_naissance": "1995-05-10"
+      },
+      {
+        "nom": "Eliot Matazo",
+        "numero": 8,
+        "poste": "Milieu",
+        "nationalite": "Belgique",
+        "date_naissance": "2002-02-15"
+      },
+      {
+        "nom": "Jens Hjertø-Dahl",
+        "numero": 14,
+        "poste": "Milieu",
+        "nationalite": "Norvège",
+        "date_naissance": "2005-06-09"
+      },
+      {
+        "nom": "Óscar Zambrano",
+        "numero": 18,
+        "poste": "Milieu",
+        "nationalite": "Équateur",
+        "date_naissance": "2004-04-20"
+      },
+      {
+        "nom": "Matt Crooks",
+        "numero": 25,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "1994-01-20"
+      },
+      {
+        "nom": "Regan Slater",
+        "numero": 27,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "1999-01-11"
+      },
+      {
+        "nom": "Lucas Gourna-Douath",
+        "numero": 29,
+        "poste": "Milieu",
+        "nationalite": "France",
+        "date_naissance": "2003-08-05"
+      },
+      {
+        "nom": "Abdülkadir Ömür",
+        "numero": 33,
+        "poste": "Milieu",
+        "nationalite": "Turquie",
+        "date_naissance": "1999-06-25"
+      },
+      {
+        "nom": "Christos Mouzakitis",
+        "numero": 36,
+        "poste": "Milieu",
+        "nationalite": "Grèce",
+        "date_naissance": "2007-01-01"
+      },
+      {
+        "nom": "Tim Iroegbunam",
+        "numero": 42,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2003-05-30"
+      },
+      {
+        "nom": "Sorba Thomas",
+        "numero": 7,
+        "poste": "Attaquant",
+        "nationalite": "Pays de Galles",
+        "date_naissance": "1999-01-25"
+      },
+      {
+        "nom": "Oli McBurnie",
+        "numero": 9,
+        "poste": "Attaquant",
+        "nationalite": "Écosse",
+        "date_naissance": "1996-06-04"
+      },
+      {
+        "nom": "Mohamed Belloumi",
+        "numero": 10,
+        "poste": "Attaquant",
+        "nationalite": "Algérie",
+        "date_naissance": "2002-01-01"
+      },
+      {
+        "nom": "Joe Gelhardt",
+        "numero": 11,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "2002-05-04"
+      },
+      {
+        "nom": "Ilyas Ansah",
+        "numero": 28,
+        "poste": "Attaquant",
+        "nationalite": "Allemagne",
+        "date_naissance": "2004-11-08"
+      },
+      {
+        "nom": "Robinio Vaz",
+        "numero": 47,
+        "poste": "Attaquant",
+        "nationalite": "France",
+        "date_naissance": "2007-01-01"
+      },
+      {
+        "nom": "Mohamed-Ali Cho",
+        "numero": 50,
+        "poste": "Attaquant",
+        "nationalite": "France",
+        "date_naissance": "2004-01-19"
+      }
+    ]
+  },
+  {
+    "club": "Coventry City",
+    "saison": "2026/2027",
+    "entraineur": "Frank Lampard",
+    "joueurs": [
+      {
+        "nom": "Oliver Dovin",
+        "numero": 1,
+        "poste": "Gardien",
+        "nationalite": "Suède",
+        "date_naissance": "2002-07-11"
+      },
+      {
+        "nom": "Ben Wilson",
+        "numero": 13,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "1992-08-09"
+      },
+      {
+        "nom": "Carl Rushworth",
+        "numero": 19,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "2001-07-02"
+      },
+      {
+        "nom": "Bradley Collins",
+        "numero": 40,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "1997-02-18"
+      },
+      {
+        "nom": "Jay Dasilva",
+        "numero": 3,
+        "poste": "Défenseur",
+        "nationalite": "Pays de Galles",
+        "date_naissance": "1998-04-22"
+      },
+      {
+        "nom": "Bobby Thomas",
+        "numero": 4,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2001-01-30"
+      },
+      {
+        "nom": "Liam Kitching",
+        "numero": 15,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1999-09-25"
+      },
+      {
+        "nom": "Joel Latibeaudiere",
+        "numero": 22,
+        "poste": "Défenseur",
+        "nationalite": "Jamaïque",
+        "date_naissance": "2000-01-06"
+      },
+      {
+        "nom": "Luke Woolfenden",
+        "numero": 26,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1998-10-21"
+      },
+      {
+        "nom": "Milan van Ewijk",
+        "numero": 27,
+        "poste": "Défenseur",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "2000-09-08"
+      },
+      {
+        "nom": "Miguel Ángel Brau",
+        "numero": 33,
+        "poste": "Défenseur",
+        "nationalite": "Espagne",
+        "date_naissance": "2001-12-27"
+      },
+      {
+        "nom": "Kaine Kesler-Hayden",
+        "numero": 20,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2002-10-23"
+      },
+      {
+        "nom": "Jake Bidwell",
+        "numero": 21,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1993-03-21"
+      },
+      {
+        "nom": "Ethan Pinnock",
+        "numero": 5,
+        "poste": "Défenseur",
+        "nationalite": "Jamaïque",
+        "date_naissance": "1993-05-29"
+      },
+      {
+        "nom": "Aurele Amenda",
+        "numero": 6,
+        "poste": "Défenseur",
+        "nationalite": "Suisse",
+        "date_naissance": "2003-08-26"
+      },
+      {
+        "nom": "Jack Rudoni",
+        "numero": 5,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2001-06-14"
+      },
+      {
+        "nom": "Matt Grimes",
+        "numero": 6,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "1995-07-15"
+      },
+      {
+        "nom": "Tatsuhiro Sakamoto",
+        "numero": 7,
+        "poste": "Milieu",
+        "nationalite": "Japon",
+        "date_naissance": "1996-10-22"
+      },
+      {
+        "nom": "Jamie Allen",
+        "numero": 8,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "1995-01-29"
+      },
+      {
+        "nom": "Josh Eccles",
+        "numero": 28,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2000-04-06"
+      },
+      {
+        "nom": "Victor Torp",
+        "numero": 29,
+        "poste": "Milieu",
+        "nationalite": "Danemark",
+        "date_naissance": "1999-07-30"
+      },
+      {
+        "nom": "Frank Onyeka",
+        "numero": 16,
+        "poste": "Milieu",
+        "nationalite": "Nigeria",
+        "date_naissance": "1998-01-01"
+      },
+      {
+        "nom": "Kai Andrews",
+        "numero": 54,
+        "poste": "Milieu",
+        "nationalite": "Pays de Galles",
+        "date_naissance": "2006-08-06"
+      },
+      {
+        "nom": "Caleb Yirenkyi",
+        "numero": 18,
+        "poste": "Milieu",
+        "nationalite": "Ghana",
+        "date_naissance": "2006-01-01"
+      },
+      {
+        "nom": "Gus Hamer",
+        "numero": 14,
+        "poste": "Milieu",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "1997-06-14"
+      },
+      {
+        "nom": "Ephron Mason-Clark",
+        "numero": 10,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "1999-08-25"
+      },
+      {
+        "nom": "Haji Wright",
+        "numero": 11,
+        "poste": "Attaquant",
+        "nationalite": "États-Unis",
+        "date_naissance": "1998-03-27"
+      },
+      {
+        "nom": "Ellis Simms",
+        "numero": 9,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "2001-01-05"
+      },
+      {
+        "nom": "Brandon Thomas-Asante",
+        "numero": 23,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "1998-12-29"
+      },
+      {
+        "nom": "Romain Esse",
+        "numero": 17,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "2005-05-13"
+      },
+      {
+        "nom": "Norman Bassette",
+        "numero": 37,
+        "poste": "Attaquant",
+        "nationalite": "Belgique",
+        "date_naissance": "2004-11-09"
+      },
+      {
+        "nom": "Loum Tchaouna",
+        "numero": 24,
+        "poste": "Attaquant",
+        "nationalite": "France",
+        "date_naissance": "2003-09-08"
+      },
+      {
+        "nom": "Taiwo Awoniyi",
+        "numero": 25,
+        "poste": "Attaquant",
+        "nationalite": "Nigeria",
+        "date_naissance": "1997-08-12"
+      }
+    ]
+  },
+  {
+    "club": "Crystal Palace",
+    "saison": "2026/2027",
+    "entraineur": "Pierre Sage",
+    "joueurs": [
+      {
+        "nom": "Dean Henderson",
+        "numero": 1,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "1997-03-12"
+      },
+      {
+        "nom": "Remi Matthews",
+        "numero": 31,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "1994-02-10"
+      },
+      {
+        "nom": "Walter Benítez",
+        "numero": 44,
+        "poste": "Gardien",
+        "nationalite": "Argentine",
+        "date_naissance": "1993-01-19"
+      },
+      {
+        "nom": "Daniel Muñoz",
+        "numero": 2,
+        "poste": "Défenseur",
+        "nationalite": "Colombie",
+        "date_naissance": "1996-05-26"
+      },
+      {
+        "nom": "Tyrick Mitchell",
+        "numero": 3,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1999-09-01"
+      },
+      {
+        "nom": "Chadi Riad",
+        "numero": 4,
+        "poste": "Défenseur",
+        "nationalite": "Maroc",
+        "date_naissance": "2003-06-17"
+      },
+      {
+        "nom": "Axel Disasi",
+        "numero": 5,
+        "poste": "Défenseur",
+        "nationalite": "France",
+        "date_naissance": "1998-03-11"
+      },
+      {
+        "nom": "Jaydee Canvot",
+        "numero": 6,
+        "poste": "Défenseur",
+        "nationalite": "France",
+        "date_naissance": "2006-07-29"
+      },
+      {
+        "nom": "Takehiro Tomiyasu",
+        "numero": 17,
+        "poste": "Défenseur",
+        "nationalite": "Japon",
+        "date_naissance": "1998-11-05"
+      },
+      {
+        "nom": "Honest Ahanor",
+        "numero": 21,
+        "poste": "Défenseur",
+        "nationalite": "Italie",
+        "date_naissance": "2008-02-23"
+      },
+      {
+        "nom": "Chris Richards",
+        "numero": 26,
+        "poste": "Défenseur",
+        "nationalite": "États-Unis",
+        "date_naissance": "2000-03-28"
+      },
+      {
+        "nom": "Óscar Mingueza",
+        "numero": 30,
+        "poste": "Défenseur",
+        "nationalite": "Espagne",
+        "date_naissance": "1999-05-13"
+      },
+      {
+        "nom": "Ben Chilwell",
+        "numero": 33,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1996-12-21"
+      },
+      {
+        "nom": "Jefferson Lerma",
+        "numero": 8,
+        "poste": "Milieu",
+        "nationalite": "Colombie",
+        "date_naissance": "1994-10-25"
+      },
+      {
+        "nom": "Daichi Kamada",
+        "numero": 18,
+        "poste": "Milieu",
+        "nationalite": "Japon",
+        "date_naissance": "1996-08-05"
+      },
+      {
+        "nom": "Will Hughes",
+        "numero": 19,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "1995-04-17"
+      },
+      {
+        "nom": "Adam Wharton",
+        "numero": 20,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2004-02-06"
+      },
+      {
+        "nom": "Quinten Timber",
+        "numero": 23,
+        "poste": "Milieu",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "2001-06-17"
+      },
+      {
+        "nom": "Cheick Doucouré",
+        "numero": 28,
+        "poste": "Milieu",
+        "nationalite": "Mali",
+        "date_naissance": "2000-01-08"
+      },
+      {
+        "nom": "Ismaïla Sarr",
+        "numero": 7,
+        "poste": "Attaquant",
+        "nationalite": "Sénégal",
+        "date_naissance": "1998-02-25"
+      },
+      {
+        "nom": "Eddie Nketiah",
+        "numero": 9,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "1999-05-30"
+      },
+      {
+        "nom": "Yéremy Pino",
+        "numero": 10,
+        "poste": "Attaquant",
+        "nationalite": "Espagne",
+        "date_naissance": "2002-10-20"
+      },
+      {
+        "nom": "Dwight McNeil",
+        "numero": 11,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "1999-11-22"
+      },
+      {
+        "nom": "Zavier Gozo",
+        "numero": 12,
+        "poste": "Attaquant",
+        "nationalite": "États-Unis",
+        "date_naissance": "2007-03-22"
+      },
+      {
+        "nom": "Jean-Philippe Mateta",
+        "numero": 14,
+        "poste": "Attaquant",
+        "nationalite": "France",
+        "date_naissance": "1997-06-28"
+      },
+      {
+        "nom": "Jørgen Strand Larsen",
+        "numero": 22,
+        "poste": "Attaquant",
+        "nationalite": "Norvège",
+        "date_naissance": "2000-02-06"
+      },
+      {
+        "nom": "Anan Khalaili",
+        "numero": 25,
+        "poste": "Attaquant",
+        "nationalite": "Israël",
+        "date_naissance": "2004-09-03"
+      },
+      {
+        "nom": "Evann Guessand",
+        "numero": 29,
+        "poste": "Attaquant",
+        "nationalite": "Côte d'Ivoire",
+        "date_naissance": "2001-07-01"
+      },
+      {
+        "nom": "Darío Osorio",
+        "numero": 24,
+        "poste": "Attaquant",
+        "nationalite": "Chili",
+        "date_naissance": "2004-01-24"
+      }
+    ]
+  },
+  {
+    "club": "Brentford",
+    "saison": "2026/2027",
+    "entraineur": "Keith Andrews",
+    "joueurs": [
+      {
+        "nom": "Caoimhín Kelleher",
+        "numero": 1,
+        "poste": "Gardien",
+        "nationalite": "Irlande",
+        "date_naissance": "1998-11-23"
+      },
+      {
+        "nom": "Hákon Valdimarsson",
+        "numero": 12,
+        "poste": "Gardien",
+        "nationalite": "Islande",
+        "date_naissance": "2001-10-13"
+      },
+      {
+        "nom": "Ellery Balcombe",
+        "numero": 31,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "1999-10-15"
+      },
+      {
+        "nom": "Aaron Hickey",
+        "numero": 2,
+        "poste": "Défenseur",
+        "nationalite": "Écosse",
+        "date_naissance": "2002-06-10"
+      },
+      {
+        "nom": "Rico Henry",
+        "numero": 3,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1997-07-08"
+      },
+      {
+        "nom": "Sepp van den Berg",
+        "numero": 4,
+        "poste": "Défenseur",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "2001-12-20"
+      },
+      {
+        "nom": "Ethan Pinnock",
+        "numero": 5,
+        "poste": "Défenseur",
+        "nationalite": "Jamaïque",
+        "date_naissance": "1993-05-29"
+      },
+      {
+        "nom": "Kristoffer Ajer",
+        "numero": 20,
+        "poste": "Défenseur",
+        "nationalite": "Norvège",
+        "date_naissance": "1998-04-17"
+      },
+      {
+        "nom": "Nathan Collins",
+        "numero": 22,
+        "poste": "Défenseur",
+        "nationalite": "Irlande",
+        "date_naissance": "2001-04-30"
+      },
+      {
+        "nom": "Michael Kayode",
+        "numero": 33,
+        "poste": "Défenseur",
+        "nationalite": "Italie",
+        "date_naissance": "2004-07-10"
+      },
+      {
+        "nom": "Jannik Schuster",
+        "numero": 44,
+        "poste": "Défenseur",
+        "nationalite": "Autriche",
+        "date_naissance": "2006-01-01"
+      },
+      {
+        "nom": "Benjamin Fredrick",
+        "numero": 48,
+        "poste": "Défenseur",
+        "nationalite": "Nigeria",
+        "date_naissance": "2005-05-28"
+      },
+      {
+        "nom": "El Hadji Malick Diouf",
+        "numero": 25,
+        "poste": "Défenseur",
+        "nationalite": "Sénégal",
+        "date_naissance": "2004-12-29"
+      },
+      {
+        "nom": "Yehor Yarmoliuk",
+        "numero": 6,
+        "poste": "Milieu",
+        "nationalite": "Ukraine",
+        "date_naissance": "2004-03-01"
+      },
+      {
+        "nom": "Mathias Jensen",
+        "numero": 8,
+        "poste": "Milieu",
+        "nationalite": "Danemark",
+        "date_naissance": "1996-01-01"
+      },
+      {
+        "nom": "Josh Dasilva",
+        "numero": 10,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "1998-10-23"
+      },
+      {
+        "nom": "Fábio Carvalho",
+        "numero": 14,
+        "poste": "Milieu",
+        "nationalite": "Portugal",
+        "date_naissance": "2002-08-30"
+      },
+      {
+        "nom": "Antoni Milambo",
+        "numero": 17,
+        "poste": "Milieu",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "2005-04-03"
+      },
+      {
+        "nom": "Mamadou Sangaré",
+        "numero": 18,
+        "poste": "Milieu",
+        "nationalite": "Mali",
+        "date_naissance": "2002-01-01"
+      },
+      {
+        "nom": "Mikkel Damsgaard",
+        "numero": 24,
+        "poste": "Milieu",
+        "nationalite": "Danemark",
+        "date_naissance": "2000-07-03"
+      },
+      {
+        "nom": "Vitaly Janelt",
+        "numero": 27,
+        "poste": "Milieu",
+        "nationalite": "Allemagne",
+        "date_naissance": "1998-05-10"
+      },
+      {
+        "nom": "Kevin Schade",
+        "numero": 7,
+        "poste": "Attaquant",
+        "nationalite": "Allemagne",
+        "date_naissance": "2001-11-27"
+      },
+      {
+        "nom": "Igor Thiago",
+        "numero": 9,
+        "poste": "Attaquant",
+        "nationalite": "Brésil",
+        "date_naissance": "2001-01-01"
+      },
+      {
+        "nom": "Dango Ouattara",
+        "numero": 11,
+        "poste": "Attaquant",
+        "nationalite": "Burkina Faso",
+        "date_naissance": "2002-02-11"
+      },
+      {
+        "nom": "Callum Wilson",
+        "numero": 13,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "1992-02-27"
+      },
+      {
+        "nom": "Jaidon Anthony",
+        "numero": 19,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "1999-12-01"
+      },
+      {
+        "nom": "Keane Lewis-Potter",
+        "numero": 23,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "2001-02-22"
+      },
+      {
+        "nom": "Gustavo Nunes",
+        "numero": 39,
+        "poste": "Attaquant",
+        "nationalite": "Brésil",
+        "date_naissance": "2005-11-20"
+      },
+      {
+        "nom": "Kaye Furo",
+        "numero": 47,
+        "poste": "Attaquant",
+        "nationalite": "Belgique",
+        "date_naissance": "2007-02-06"
+      }
+    ]
+  },
+  {
+    "club": "Everton",
+    "saison": "2026/2027",
+    "entraineur": "David Moyes",
+    "joueurs": [
+      {
+        "nom": "Jordan Pickford",
+        "numero": 1,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "1994-03-07"
+      },
+      {
+        "nom": "Mark Travers",
+        "numero": 12,
+        "poste": "Gardien",
+        "nationalite": "Irlande",
+        "date_naissance": "1999-05-18"
+      },
+      {
+        "nom": "Tom King",
+        "numero": 31,
+        "poste": "Gardien",
+        "nationalite": "Pays de Galles",
+        "date_naissance": "1995-03-09"
+      },
+      {
+        "nom": "Ainsley Maitland-Niles",
+        "numero": 2,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1997-08-29"
+      },
+      {
+        "nom": "Jarrad Branthwaite",
+        "numero": 4,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2002-06-27"
+      },
+      {
+        "nom": "Michael Keane",
+        "numero": 5,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1993-01-11"
+      },
+      {
+        "nom": "James Tarkowski",
+        "numero": 6,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1992-11-19"
+      },
+      {
+        "nom": "Jake O'Brien",
+        "numero": 15,
+        "poste": "Défenseur",
+        "nationalite": "Irlande",
+        "date_naissance": "2001-05-15"
+      },
+      {
+        "nom": "Vitalii Mykolenko",
+        "numero": 16,
+        "poste": "Défenseur",
+        "nationalite": "Ukraine",
+        "date_naissance": "1999-05-29"
+      },
+      {
+        "nom": "Adam Aznou",
+        "numero": 39,
+        "poste": "Défenseur",
+        "nationalite": "Maroc",
+        "date_naissance": "2006-06-02"
+      },
+      {
+        "nom": "Kiernan Dewsbury-Hall",
+        "numero": 8,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "1998-09-06"
+      },
+      {
+        "nom": "Jack Grealish",
+        "numero": 10,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "1995-09-10"
+      },
+      {
+        "nom": "Christian Norgaard",
+        "numero": 23,
+        "poste": "Milieu",
+        "nationalite": "Danemark",
+        "date_naissance": "1994-03-10"
+      },
+      {
+        "nom": "Charly Alcaraz",
+        "numero": 24,
+        "poste": "Milieu",
+        "nationalite": "Argentine",
+        "date_naissance": "2002-11-30"
+      },
+      {
+        "nom": "Hayden Hackney",
+        "numero": 30,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2002-06-26"
+      },
+      {
+        "nom": "Merlin Röhl",
+        "numero": 34,
+        "poste": "Milieu",
+        "nationalite": "Allemagne",
+        "date_naissance": "2002-07-05"
+      },
+      {
+        "nom": "James Garner",
+        "numero": 37,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2001-03-13"
+      },
+      {
+        "nom": "Harrison Armstrong",
+        "numero": 45,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2007-01-19"
+      },
+      {
+        "nom": "Thierno Barry",
+        "numero": 11,
+        "poste": "Attaquant",
+        "nationalite": "France",
+        "date_naissance": "2002-10-21"
+      },
+      {
+        "nom": "Tyrique George",
+        "numero": 19,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "2006-02-04"
+      },
+      {
+        "nom": "Tyler Dibling",
+        "numero": 20,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "2006-02-17"
+      },
+      {
+        "nom": "Brennan Johnson",
+        "numero": 22,
+        "poste": "Attaquant",
+        "nationalite": "Pays de Galles",
+        "date_naissance": "2001-05-23"
+      }
+    ]
+  },
+  {
+    "club": "Nottingham Forest",
+    "saison": "2026/2027",
+    "entraineur": "Oliver Glasner",
+    "joueurs": [
+      {
+        "nom": "Matz Sels",
+        "numero": 26,
+        "poste": "Gardien",
+        "nationalite": "Belgique",
+        "date_naissance": "1992-02-26"
+      },
+      {
+        "nom": "John Victor",
+        "numero": 12,
+        "poste": "Gardien",
+        "nationalite": "Brésil",
+        "date_naissance": "1996-02-13"
+      },
+      {
+        "nom": "Steven Benda",
+        "numero": 33,
+        "poste": "Gardien",
+        "nationalite": "Allemagne",
+        "date_naissance": "1998-10-01"
+      },
+      {
+        "nom": "Aaron Bott",
+        "numero": 63,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "2005-01-01"
+      },
+      {
+        "nom": "Ousmane Diomande",
+        "numero": 2,
+        "poste": "Défenseur",
+        "nationalite": "Côte d'Ivoire",
+        "date_naissance": "2003-12-04"
+      },
+      {
+        "nom": "Neco Williams",
+        "numero": 3,
+        "poste": "Défenseur",
+        "nationalite": "Pays de Galles",
+        "date_naissance": "2001-04-13"
+      },
+      {
+        "nom": "Murillo",
+        "numero": 5,
+        "poste": "Défenseur",
+        "nationalite": "Brésil",
+        "date_naissance": "2002-07-04"
+      },
+      {
+        "nom": "Jair Cunha",
+        "numero": 23,
+        "poste": "Défenseur",
+        "nationalite": "Brésil",
+        "date_naissance": "2005-03-07"
+      },
+      {
+        "nom": "Nikola Milenković",
+        "numero": 31,
+        "poste": "Défenseur",
+        "nationalite": "Serbie",
+        "date_naissance": "1997-10-12"
+      },
+      {
+        "nom": "Ola Aina",
+        "numero": 34,
+        "poste": "Défenseur",
+        "nationalite": "Nigeria",
+        "date_naissance": "1996-10-08"
+      },
+      {
+        "nom": "Nicolò Savona",
+        "numero": 37,
+        "poste": "Défenseur",
+        "nationalite": "Italie",
+        "date_naissance": "2003-03-19"
+      },
+      {
+        "nom": "Daniel Muñoz",
+        "numero": 27,
+        "poste": "Défenseur",
+        "nationalite": "Colombie",
+        "date_naissance": "1996-05-26"
+      },
+      {
+        "nom": "Luca Netz",
+        "numero": 25,
+        "poste": "Défenseur",
+        "nationalite": "Allemagne",
+        "date_naissance": "2003-05-15"
+      },
+      {
+        "nom": "Ibrahim Sangaré",
+        "numero": 6,
+        "poste": "Milieu",
+        "nationalite": "Côte d'Ivoire",
+        "date_naissance": "1997-12-02"
+      },
+      {
+        "nom": "Nicolás Domínguez",
+        "numero": 8,
+        "poste": "Milieu",
+        "nationalite": "Argentine",
+        "date_naissance": "1998-06-28"
+      },
+      {
+        "nom": "Xaver Schlager",
+        "numero": 21,
+        "poste": "Milieu",
+        "nationalite": "Autriche",
+        "date_naissance": "1997-09-28"
+      },
+      {
+        "nom": "Ryan Yates",
+        "numero": 22,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "1997-11-21"
+      },
+      {
+        "nom": "James McAtee",
+        "numero": 24,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2002-10-18"
+      },
+      {
+        "nom": "Morgan Gibbs-White",
+        "numero": 10,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2000-01-27"
+      },
+      {
+        "nom": "Callum Hudson-Odoi",
+        "numero": 7,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "2000-11-07"
+      },
+      {
+        "nom": "Chris Wood",
+        "numero": 9,
+        "poste": "Attaquant",
+        "nationalite": "Nouvelle-Zélande",
+        "date_naissance": "1991-12-07"
+      },
+      {
+        "nom": "Igor Jesus",
+        "numero": 11,
+        "poste": "Attaquant",
+        "nationalite": "Brésil",
+        "date_naissance": "2001-02-25"
+      },
+      {
+        "nom": "Dan Ndoye",
+        "numero": 14,
+        "poste": "Attaquant",
+        "nationalite": "Suisse",
+        "date_naissance": "2000-10-25"
+      },
+      {
+        "nom": "Arnaud Kalimuendo",
+        "numero": 15,
+        "poste": "Attaquant",
+        "nationalite": "France",
+        "date_naissance": "2002-01-20"
+      },
+      {
+        "nom": "Liam Delap",
+        "numero": 19,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "2003-02-08"
+      }
+    ]
+  },
+  {
+    "club": "AFC Bournemouth",
+    "saison": "2026/2027",
+    "entraineur": "Marco Rose",
+    "joueurs": [
+      {
+        "nom": "Ðorðe Petrovic",
+        "numero": 1,
+        "poste": "Gardien",
+        "nationalite": "Serbie",
+        "date_naissance": "1999-10-08"
+      },
+      {
+        "nom": "Fraser Forster",
+        "numero": 17,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "1988-03-17"
+      },
+      {
+        "nom": "Michele Di Gregorio",
+        "numero": 20,
+        "poste": "Gardien",
+        "nationalite": "Italie",
+        "date_naissance": "1997-07-27"
+      },
+      {
+        "nom": "Julián Araujo",
+        "numero": 2,
+        "poste": "Défenseur",
+        "nationalite": "Mexique",
+        "date_naissance": "2001-08-13"
+      },
+      {
+        "nom": "Adrien Truffert",
+        "numero": 3,
+        "poste": "Défenseur",
+        "nationalite": "France",
+        "date_naissance": "2001-11-20"
+      },
+      {
+        "nom": "James Hill",
+        "numero": 5,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2002-01-10"
+      },
+      {
+        "nom": "Julio Soler",
+        "numero": 6,
+        "poste": "Défenseur",
+        "nationalite": "Argentine",
+        "date_naissance": "2005-02-16"
+      },
+      {
+        "nom": "António Silva",
+        "numero": 14,
+        "poste": "Défenseur",
+        "nationalite": "Portugal",
+        "date_naissance": "2003-10-30"
+      },
+      {
+        "nom": "Adam Smith",
+        "numero": 15,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1991-04-29"
+      },
+      {
+        "nom": "Bafodé Diakité",
+        "numero": 18,
+        "poste": "Défenseur",
+        "nationalite": "France",
+        "date_naissance": "2001-01-06"
+      },
+      {
+        "nom": "Juanlu Sánchez",
+        "numero": 24,
+        "poste": "Défenseur",
+        "nationalite": "Espagne",
+        "date_naissance": "2003-08-15"
+      },
+      {
+        "nom": "Max Aarons",
+        "numero": 28,
+        "poste": "Défenseur",
+        "nationalite": "Jamaïque",
+        "date_naissance": "2000-01-04"
+      },
+      {
+        "nom": "Veljko Milosavljević",
+        "numero": 44,
+        "poste": "Défenseur",
+        "nationalite": "Serbie",
+        "date_naissance": "2007-06-28"
+      },
+      {
+        "nom": "Lewis Cook",
+        "numero": 4,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "1997-02-03"
+      },
+      {
+        "nom": "David Brooks",
+        "numero": 7,
+        "poste": "Milieu",
+        "nationalite": "Pays de Galles",
+        "date_naissance": "1997-07-08"
+      },
+      {
+        "nom": "Alex Scott",
+        "numero": 8,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2003-08-21"
+      },
+      {
+        "nom": "Ryan Christie",
+        "numero": 10,
+        "poste": "Milieu",
+        "nationalite": "Écosse",
+        "date_naissance": "1995-02-22"
+      },
+      {
+        "nom": "Tyler Adams",
+        "numero": 12,
+        "poste": "Milieu",
+        "nationalite": "États-Unis",
+        "date_naissance": "1999-02-14"
+      },
+      {
+        "nom": "Marcus Tavernier",
+        "numero": 16,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "1999-03-22"
+      },
+      {
+        "nom": "Alex Tóth",
+        "numero": 27,
+        "poste": "Milieu",
+        "nationalite": "Hongrie",
+        "date_naissance": "2005-10-23"
+      },
+      {
+        "nom": "Ben Winterburn",
+        "numero": 47,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2004-09-04"
+      },
+      {
+        "nom": "Ben Gannon-Doak",
+        "numero": 11,
+        "poste": "Attaquant",
+        "nationalite": "Écosse",
+        "date_naissance": "2005-11-11"
+      },
+      {
+        "nom": "Justin Kluivert",
+        "numero": 19,
+        "poste": "Attaquant",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "1999-05-05"
+      },
+      {
+        "nom": "Amine Adli",
+        "numero": 21,
+        "poste": "Attaquant",
+        "nationalite": "Maroc",
+        "date_naissance": "2000-05-10"
+      },
+      {
+        "nom": "Junior Kroupi",
+        "numero": 22,
+        "poste": "Attaquant",
+        "nationalite": "France",
+        "date_naissance": "2006-06-23"
+      },
+      {
+        "nom": "Daniel Jebbison",
+        "numero": 29,
+        "poste": "Attaquant",
+        "nationalite": "Canada",
+        "date_naissance": "2003-07-11"
+      },
+      {
+        "nom": "Álvaro Rodríguez",
+        "numero": 30,
+        "poste": "Attaquant",
+        "nationalite": "Espagne",
+        "date_naissance": "2004-07-14"
+      },
+      {
+        "nom": "Rayan",
+        "numero": 37,
+        "poste": "Attaquant",
+        "nationalite": "Brésil",
+        "date_naissance": "2006-08-03"
+      },
+      {
+        "nom": "Evanilson",
+        "numero": 9,
+        "poste": "Attaquant",
+        "nationalite": "Brésil",
+        "date_naissance": "1999-10-06"
+      }
+    ]
+  },
+  {
+    "club": "Leeds United",
+    "saison": "2026/2027",
+    "entraineur": "Daniel Farke",
+    "joueurs": [
+      {
+        "nom": "James Trafford",
+        "numero": 1,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "2002-10-10"
+      },
+      {
+        "nom": "Michael Zetterer",
+        "numero": 16,
+        "poste": "Gardien",
+        "nationalite": "Allemagne",
+        "date_naissance": "1995-07-12"
+      },
+      {
+        "nom": "Alex Cairns",
+        "numero": 21,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "1993-01-04"
+      },
+      {
+        "nom": "Lucas Perri",
+        "numero": 23,
+        "poste": "Gardien",
+        "nationalite": "Brésil",
+        "date_naissance": "1997-12-10"
+      },
+      {
+        "nom": "Rory Mahady",
+        "numero": 48,
+        "poste": "Gardien",
+        "nationalite": "Écosse",
+        "date_naissance": "2006-08-16"
+      },
+      {
+        "nom": "Darryl Ombang",
+        "numero": 49,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "2005-07-11"
+      },
+      {
+        "nom": "Jayden Bogle",
+        "numero": 2,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2000-07-27"
+      },
+      {
+        "nom": "Gabriel Gudmundsson",
+        "numero": 3,
+        "poste": "Défenseur",
+        "nationalite": "Suède",
+        "date_naissance": "1999-04-29"
+      },
+      {
+        "nom": "Tarik Muharemović",
+        "numero": 5,
+        "poste": "Défenseur",
+        "nationalite": "Bosnie-Herzégovine",
+        "date_naissance": "2003-02-28"
+      },
+      {
+        "nom": "Joe Rodon",
+        "numero": 6,
+        "poste": "Défenseur",
+        "nationalite": "Pays de Galles",
+        "date_naissance": "1997-10-22"
+      },
+      {
+        "nom": "Jaka Bijol",
+        "numero": 15,
+        "poste": "Défenseur",
+        "nationalite": "Slovénie",
+        "date_naissance": "1999-02-05"
+      },
+      {
+        "nom": "James Justin",
+        "numero": 24,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1998-02-23"
+      },
+      {
+        "nom": "Melvin Bard",
+        "numero": 26,
+        "poste": "Défenseur",
+        "nationalite": "France",
+        "date_naissance": "2000-11-06"
+      },
+      {
+        "nom": "Nico Elvedi",
+        "numero": 30,
+        "poste": "Défenseur",
+        "nationalite": "Suisse",
+        "date_naissance": "1996-09-30"
+      },
+      {
+        "nom": "Ethan Ampadu",
+        "numero": 4,
+        "poste": "Milieu",
+        "nationalite": "Pays de Galles",
+        "date_naissance": "2000-09-14"
+      },
+      {
+        "nom": "Sean Longstaff",
+        "numero": 8,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "1997-10-30"
+      },
+      {
+        "nom": "Brenden Aaronson",
+        "numero": 11,
+        "poste": "Milieu",
+        "nationalite": "États-Unis",
+        "date_naissance": "2000-10-22"
+      },
+      {
+        "nom": "Anton Stach",
+        "numero": 18,
+        "poste": "Milieu",
+        "nationalite": "Allemagne",
+        "date_naissance": "1998-11-15"
+      },
+      {
+        "nom": "Ao Tanaka",
+        "numero": 22,
+        "poste": "Milieu",
+        "nationalite": "Japon",
+        "date_naissance": "1998-09-10"
+      },
+      {
+        "nom": "Ilia Gruev",
+        "numero": 44,
+        "poste": "Milieu",
+        "nationalite": "Bulgarie",
+        "date_naissance": "2000-05-06"
+      },
+      {
+        "nom": "Rhys Chadwick",
+        "numero": 47,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2007-02-19"
+      },
+      {
+        "nom": "Alfie Cresswell",
+        "numero": 50,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2007-07-15"
+      },
+      {
+        "nom": "Callum Mills",
+        "numero": 72,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2008-09-19"
+      },
+      {
+        "nom": "Daniel James",
+        "numero": 7,
+        "poste": "Attaquant",
+        "nationalite": "Pays de Galles",
+        "date_naissance": "1997-11-10"
+      },
+      {
+        "nom": "Dominic Calvert-Lewin",
+        "numero": 9,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "1997-03-16"
+      },
+      {
+        "nom": "Harry Wilson",
+        "numero": 10,
+        "poste": "Attaquant",
+        "nationalite": "Pays de Galles",
+        "date_naissance": "1997-03-22"
+      },
+      {
+        "nom": "Lukas Nmecha",
+        "numero": 14,
+        "poste": "Attaquant",
+        "nationalite": "Allemagne",
+        "date_naissance": "1998-12-14"
+      },
+      {
+        "nom": "Noah Okafor",
+        "numero": 19,
+        "poste": "Attaquant",
+        "nationalite": "Suisse",
+        "date_naissance": "2000-05-24"
+      },
+      {
+        "nom": "Wilfried Gnonto",
+        "numero": 29,
+        "poste": "Attaquant",
+        "nationalite": "Côte d'Ivoire",
+        "date_naissance": "2003-11-05"
+      },
+      {
+        "nom": "Jean-Mattéo Bahoya",
+        "numero": 23,
+        "poste": "Attaquant",
+        "nationalite": "France",
+        "date_naissance": "2005-05-07"
+      }
+    ]
+  },
+  {
+    "club": "Ipswich Town",
+    "saison": "2026/2027",
+    "entraineur": "Gary O'Neil",
+    "joueurs": [
+      {
+        "nom": "Kjell Scherpen",
+        "numero": 37,
+        "poste": "Gardien",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "2000-01-23"
+      },
+      {
+        "nom": "Christian Walton",
+        "numero": 28,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "1995-11-09"
+      },
+      {
+        "nom": "Alex Palmer",
+        "numero": 1,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "1996-08-10"
+      },
+      {
+        "nom": "David Button",
+        "numero": 27,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "1989-02-27"
+      },
+      {
+        "nom": "Kayne van Oevelen",
+        "numero": 31,
+        "poste": "Gardien",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "2003-01-01"
+      },
+      {
+        "nom": "Darnell Furlong",
+        "numero": 2,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1995-10-31"
+      },
+      {
+        "nom": "Leif Davis",
+        "numero": 3,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "1999-12-31"
+      },
+      {
+        "nom": "Cédric Kipré",
+        "numero": 4,
+        "poste": "Défenseur",
+        "nationalite": "Côte d'Ivoire",
+        "date_naissance": "1996-12-09"
+      },
+      {
+        "nom": "Issa Diop",
+        "numero": 6,
+        "poste": "Défenseur",
+        "nationalite": "Maroc",
+        "date_naissance": "1997-01-09"
+      },
+      {
+        "nom": "Jacob Greaves",
+        "numero": 24,
+        "poste": "Défenseur",
+        "nationalite": "Angleterre",
+        "date_naissance": "2000-09-12"
+      },
+      {
+        "nom": "Dara O'Shea",
+        "numero": 26,
+        "poste": "Défenseur",
+        "nationalite": "Irlande",
+        "date_naissance": "1999-03-04"
+      },
+      {
+        "nom": "Abdoul Ouattara",
+        "numero": 42,
+        "poste": "Défenseur",
+        "nationalite": "Côte d'Ivoire",
+        "date_naissance": "2005-10-22"
+      },
+      {
+        "nom": "Azor Matusiwa",
+        "numero": 5,
+        "poste": "Milieu",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "1998-04-28"
+      },
+      {
+        "nom": "Sindre Walle Egeli",
+        "numero": 8,
+        "poste": "Milieu",
+        "nationalite": "Norvège",
+        "date_naissance": "2006-01-01"
+      },
+      {
+        "nom": "Julio Enciso",
+        "numero": 10,
+        "poste": "Milieu",
+        "nationalite": "Paraguay",
+        "date_naissance": "2004-01-23"
+      },
+      {
+        "nom": "Florentino Luís",
+        "numero": 12,
+        "poste": "Milieu",
+        "nationalite": "Portugal",
+        "date_naissance": "1999-08-19"
+      },
+      {
+        "nom": "Jack Taylor",
+        "numero": 14,
+        "poste": "Milieu",
+        "nationalite": "Irlande",
+        "date_naissance": "1998-06-23"
+      },
+      {
+        "nom": "Kasey McAteer",
+        "numero": 20,
+        "poste": "Milieu",
+        "nationalite": "Irlande",
+        "date_naissance": "2001-11-22"
+      },
+      {
+        "nom": "Saša Lukić",
+        "numero": 23,
+        "poste": "Milieu",
+        "nationalite": "Serbie",
+        "date_naissance": "1996-08-13"
+      },
+      {
+        "nom": "Exequiel Palacios",
+        "numero": 25,
+        "poste": "Milieu",
+        "nationalite": "Argentine",
+        "date_naissance": "1998-10-05"
+      },
+      {
+        "nom": "Cameron Humphreys",
+        "numero": 30,
+        "poste": "Milieu",
+        "nationalite": "Angleterre",
+        "date_naissance": "2003-10-30"
+      },
+      {
+        "nom": "Marcelino Núñez",
+        "numero": 32,
+        "poste": "Milieu",
+        "nationalite": "Chili",
+        "date_naissance": "2000-03-01"
+      },
+      {
+        "nom": "Anis Mehmeti",
+        "numero": 33,
+        "poste": "Milieu",
+        "nationalite": "Albanie",
+        "date_naissance": "2001-01-01"
+      },
+      {
+        "nom": "Abdul Fatawu",
+        "numero": 7,
+        "poste": "Attaquant",
+        "nationalite": "Ghana",
+        "date_naissance": "2004-03-08"
+      },
+      {
+        "nom": "Jaden Philogene",
+        "numero": 11,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "2002-02-08"
+      },
+      {
+        "nom": "Emersonn",
+        "numero": 19,
+        "poste": "Attaquant",
+        "nationalite": "Brésil",
+        "date_naissance": "2004-01-01"
+      },
+      {
+        "nom": "Chuba Akpom",
+        "numero": 29,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "1995-10-09"
+      },
+      {
+        "nom": "Daizen Maeda",
+        "numero": 38,
+        "poste": "Attaquant",
+        "nationalite": "Japon",
+        "date_naissance": "1997-10-20"
+      },
+      {
+        "nom": "Jack Clarke",
+        "numero": 47,
+        "poste": "Attaquant",
+        "nationalite": "Angleterre",
+        "date_naissance": "2000-11-23"
+      },
+      {
+        "nom": "Zian Flemming",
+        "numero": 9,
+        "poste": "Attaquant",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "1998-01-01"
+      }
+    ]
+  },
+  {
+    "club": "Sunderland",
+    "saison": "2026/2027",
+    "entraineur": "Régis Le Bris",
+    "joueurs": [
+      {
+        "nom": "Robin Roefs",
+        "numero": 22,
+        "poste": "Gardien",
+        "nationalite": "Pays-Bas",
+        "date_naissance": "2003-01-17"
+      },
+      {
+        "nom": "Melker Ellborg",
+        "numero": 31,
+        "poste": "Gardien",
+        "nationalite": "Suède",
+        "date_naissance": "2003-05-22"
+      },
+      {
+        "nom": "Simon Moore",
+        "numero": 21,
+        "poste": "Gardien",
+        "nationalite": "Angleterre",
+        "date_naissance": "1990-05-19"
+      },
+      {
+        "nom": "Trai Hume",
+        "numero": 32,
+        "poste": "Défenseur",
+        "nationalite": "Irlande du Nord",
+        "date_naissance": "2002-03-18"
+      }
+    ]
+  }
+];

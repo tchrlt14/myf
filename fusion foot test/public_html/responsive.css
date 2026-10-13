@@ -1,0 +1,1252 @@
+/* Viewport-first responsive shell and compact menu. Loaded after the visual themes. */
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+#fg-root {
+    width: 100%;
+    max-width: none;
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0 auto;
+}
+
+/* Menu: show the league, clubs, new-game action and saves together on desktop. */
+#s-menu.active {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(270px, 340px);
+    grid-template-rows: auto minmax(0, 1fr);
+    align-content: stretch;
+    gap: clamp(4px, 1.2vh, 14px) clamp(14px, 2.2vw, 36px);
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+    padding: clamp(8px, 1.5vh, 18px) clamp(16px, 3.5vw, 60px) 10px;
+    text-align: left;
+}
+
+.menu-hero {
+    grid-column: 1 / -1;
+    padding: 0 12px 4px;
+    text-align: center;
+}
+
+.logo-ball {
+    width: clamp(36px, 5vh, 52px);
+    height: clamp(36px, 5vh, 52px);
+    margin-bottom: 5px;
+}
+
+.logo-title {
+    font-size: clamp(30px, 5vh, 44px);
+    letter-spacing: clamp(2px, .6vw, 7px);
+}
+
+.logo-sub {
+    margin-top: 5px;
+    padding-top: 5px;
+    letter-spacing: clamp(2px, .35vw, 5px);
+}
+
+.menu-form-card {
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: minmax(190px, 230px) minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+    align-items: start;
+    gap: 10px 18px;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    margin: 0;
+    padding: clamp(12px, 1.5vw, 20px);
+}
+
+.menu-form-card > .select-group:first-child {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+    margin: 0;
+}
+
+.menu-form-card > .select-group:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+}
+
+.menu-form-card .select-group select {
+    min-height: 42px;
+}
+
+.club-search {
+    width: 100%;
+    min-height: 38px;
+    margin: 0 0 7px;
+    padding: 8px 11px;
+    color: var(--text);
+    background: var(--panel3);
+    border: 1px solid var(--border2);
+    border-radius: var(--radius-sm);
+    font: 500 13px var(--font-ui, 'Barlow', sans-serif);
+}
+
+.club-search::placeholder {
+    color: var(--muted);
+}
+
+.club-search:focus-visible {
+    outline: 2px solid var(--accent2);
+    outline-offset: 1px;
+}
+
+.club-grid {
+    grid-template-columns: repeat(auto-fill, minmax(118px, 1fr));
+    grid-auto-rows: minmax(0, 1fr);
+    align-content: start;
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 0;
+    max-height: none;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+.club-card[hidden] {
+    display: none !important;
+}
+
+.club-card {
+    min-width: 0;
+    padding: 7px 5px;
+}
+
+.club-card-crest {
+    height: 32px;
+    margin-bottom: 4px;
+}
+
+.club-card-name,
+.club-card-rating {
+    overflow-wrap: anywhere;
+}
+
+.menu-form-card .club-card .btn-outline {
+    margin-top: 4px !important;
+    padding: 2px 6px !important;
+}
+
+.menu-actions {
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: end;
+    gap: 8px;
+    min-width: 0;
+    margin: 0;
+}
+
+.menu-actions .btn-start,
+.menu-actions .btn-outline {
+    width: 100%;
+    min-height: 44px;
+}
+
+.saves-section {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 0;
+    max-width: none;
+    margin: 0;
+    overflow: auto;
+    overscroll-behavior: contain;
+}
+
+.saves-section-title {
+    flex: 0 0 auto;
+    margin: 4px 0 9px;
+}
+
+.save-slots-grid {
+    grid-template-columns: minmax(0, 1fr);
+    align-content: start;
+    gap: 7px;
+}
+
+.save-slot {
+    min-height: 76px;
+    padding: 9px 10px;
+}
+
+.save-slot-icon {
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+
+/* Game: the viewport is a fixed shell; only the selected work area scrolls. */
+#s-game.active {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.top-bar {
+    min-width: 0;
+}
+
+.stats-bar {
+    min-width: 0;
+}
+
+.tab-content.active {
+    min-width: 0;
+    min-height: 0;
+    overflow: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+}
+
+#cc-news {
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.nw-list {
+    min-height: 0;
+    overscroll-behavior: contain;
+}
+
+.cc-dock {
+    min-width: 0;
+}
+
+@media (min-width: 1200px) {
+    #s-game.active {
+        display: grid;
+        grid-template-columns: 196px minmax(0, 1fr) minmax(270px, 320px);
+        grid-template-rows: auto minmax(0, 1fr) auto;
+        align-items: stretch;
+    }
+
+    .top-bar {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        flex-wrap: nowrap;
+        padding: 8px 16px !important;
+        gap: 10px;
+    }
+
+    .club-badge {
+        flex: 0 0 40px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .club-info {
+        flex: 0 1 190px;
+    }
+
+    .club-info .name {
+        font-size: 20px;
+    }
+
+    .club-info .league {
+        font-size: 10px;
+    }
+
+    .stats-bar {
+        flex: 1 1 auto;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        gap: 4px;
+    }
+
+    .stat-pill {
+        padding: 4px 8px !important;
+        gap: 5px;
+        font-size: 12px;
+    }
+
+    .stat-pill .label {
+        font-size: 9px;
+    }
+
+    .stat-pill .value {
+        font-size: 16px;
+    }
+
+    .tab-bar {
+        grid-column: 1;
+        grid-row: 2;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        min-height: 0;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: 6px 0;
+        position: relative;
+        top: auto;
+        overscroll-behavior: contain;
+    }
+
+    .tab-btn {
+        flex: 0 0 auto;
+        min-height: 36px;
+        padding: 7px 12px !important;
+        gap: 9px;
+        font-size: 12px !important;
+    }
+
+    .tab-content,
+    .tab-content.active {
+        grid-column: 2;
+        grid-row: 2;
+        height: 100%;
+        padding: 16px 20px 20px;
+    }
+
+    #cc-news {
+        grid-column: 3;
+        grid-row: 2;
+        height: 100%;
+        max-height: none;
+        position: relative;
+        inset: auto;
+        align-self: stretch;
+        border-left: 1px solid var(--border);
+    }
+
+    .nw-head {
+        padding: 10px 12px 6px;
+    }
+
+    .nw-head h3 {
+        font-size: 19px;
+    }
+
+    .nw-list {
+        overflow-y: auto;
+        padding: 6px 8px 10px;
+    }
+
+    .cc-dock {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        position: relative;
+        bottom: auto;
+        min-height: 58px;
+        padding: 7px 14px;
+    }
+
+    .cc-date {
+        min-width: 130px;
+    }
+
+    .cc-date b {
+        font-size: 21px;
+    }
+
+    .cc-go {
+        padding: 8px 28px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1199px) {
+    #s-game.active {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto auto minmax(0, 1fr) minmax(0, 112px) auto;
+    }
+
+    .top-bar {
+        grid-column: 1;
+        grid-row: 1;
+        padding: 8px 12px !important;
+        gap: 9px;
+    }
+
+    .club-badge {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+    }
+
+    .club-info .name {
+        font-size: 19px;
+    }
+
+    .stats-bar {
+        gap: 4px;
+    }
+
+    .stat-pill {
+        padding: 4px 8px !important;
+    }
+
+    .stat-pill .label {
+        font-size: 9px;
+    }
+
+    .stat-pill .value {
+        font-size: 15px;
+    }
+
+    .tab-bar {
+        grid-column: 1;
+        grid-row: 2;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        min-height: 0;
+        height: auto;
+        position: relative;
+        top: auto;
+        overflow: visible;
+        padding: 3px 6px;
+    }
+
+    .tab-btn {
+        flex: 0 1 calc(12.5% - 2px);
+        width: auto !important;
+        justify-content: center;
+        min-width: 94px;
+        min-height: 36px;
+        padding: 7px 6px !important;
+        font-size: 11px !important;
+        gap: 4px;
+    }
+
+    .tab-content,
+    .tab-content.active {
+        grid-column: 1;
+        grid-row: 3;
+        padding: 14px 16px 18px;
+    }
+
+    #cc-news {
+        grid-column: 1;
+        grid-row: 4;
+        display: flex;
+        flex-direction: column;
+        height: 112px;
+        max-height: 112px;
+        border-top: 1px solid var(--border);
+    }
+
+    .nw-head {
+        flex: 0 0 auto;
+        padding: 3px 12px;
+    }
+
+    .nw-head h3 {
+        font-size: 16px;
+    }
+
+    .nw-filters {
+        display: none;
+    }
+
+    .nw-list {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 8px;
+        padding: 2px 10px 8px;
+    }
+
+    .nw {
+        flex: 0 0 min(280px, 42vw);
+        overflow: hidden;
+        padding: 5px 9px;
+    }
+
+    .nw h4 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 14px;
+    }
+
+    .nw p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+    }
+
+    .cc-dock {
+        grid-column: 1;
+        grid-row: 5;
+        position: relative;
+        bottom: auto;
+        min-height: 56px;
+        padding: 6px 12px;
+        gap: 10px;
+    }
+
+    .cc-date {
+        min-width: 120px;
+    }
+
+    .cc-date b {
+        font-size: 19px;
+    }
+
+    .cc-go {
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    #s-menu.active {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto auto auto;
+        gap: 8px;
+        height: auto;
+        min-height: 100vh;
+        min-height: 100dvh;
+        overflow: visible;
+        padding: 8px 10px 12px;
+    }
+
+    .menu-hero {
+        grid-column: 1;
+        grid-row: 1;
+        padding: 0 4px 5px;
+    }
+
+    .logo-ball {
+        width: 38px;
+        height: 38px;
+        margin-bottom: 4px;
+    }
+
+    .logo-title {
+        font-size: clamp(25px, 8vw, 34px);
+        letter-spacing: clamp(1px, .45vw, 3px);
+    }
+
+    .logo-sub {
+        font-size: 9px;
+        margin-top: 4px;
+        padding-top: 4px;
+    }
+
+    .menu-form-card {
+        grid-column: 1;
+        grid-row: 2;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto minmax(0, 1fr) auto;
+        gap: 8px;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        padding: 12px;
+    }
+
+    .menu-form-card > .select-group:first-child {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .menu-form-card > .select-group:nth-of-type(2) {
+        grid-column: 1;
+        grid-row: 2;
+        min-height: 0;
+    }
+
+    .menu-form-card .select-group label {
+        margin-bottom: 5px;
+    }
+
+    .club-search {
+        min-height: 36px;
+        margin-bottom: 5px;
+        padding: 7px 9px;
+    }
+
+    .club-grid {
+        flex: none;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: minmax(0, auto);
+        gap: 6px;
+        max-height: min(38dvh, 300px);
+        overflow-y: auto;
+        padding: 2px;
+    }
+
+    .club-card {
+        padding: 6px 3px;
+    }
+
+    .club-card-crest {
+        height: 28px;
+        font-size: 25px;
+        margin-bottom: 3px;
+    }
+
+    .club-card-name {
+        font-size: 10px;
+    }
+
+    .club-card-rating {
+        font-size: 8px;
+        line-height: 1.15;
+    }
+
+    .menu-form-card .club-card .btn-outline {
+        font-size: 9px !important;
+        line-height: 1.2;
+        margin-top: 3px !important;
+        padding: 2px 4px !important;
+    }
+
+    .menu-actions {
+        grid-column: 1;
+        grid-row: 3;
+        grid-template-columns: minmax(0, 1fr) 48px;
+        gap: 7px;
+    }
+
+    .menu-actions .btn-start,
+    .menu-actions .btn-outline {
+        min-height: 42px;
+        padding: 8px 10px;
+    }
+
+    .saves-section {
+        grid-column: 1;
+        grid-row: 3;
+        min-height: auto;
+        overflow: visible;
+        padding: 0 2px;
+    }
+
+    .saves-section-title {
+        margin: 2px 0 6px;
+    }
+
+    .save-slots-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 5px;
+    }
+
+    .save-slot {
+        min-height: 64px;
+        padding: 7px 4px;
+    }
+
+    .save-slot-icon {
+        font-size: 17px;
+    }
+
+    .save-slot-club,
+    .save-slot-meta {
+        font-size: 9px;
+    }
+
+    /* Mobile game shell keeps actions visible and limits navigation to four tidy rows. */
+    #s-game.active {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto auto minmax(0, 1fr) minmax(0, 88px) auto;
+    }
+
+    .top-bar {
+        grid-column: 1;
+        grid-row: 1;
+        display: grid;
+        grid-template-columns: 34px minmax(0, 1fr) auto;
+        grid-template-rows: auto auto;
+        gap: 3px 8px;
+        padding: 6px 9px !important;
+        position: relative;
+    }
+
+    .club-badge {
+        grid-column: 1;
+        grid-row: 1;
+        align-self: center;
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
+        border-radius: 8px;
+    }
+
+    .club-info {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: center;
+    }
+
+    #sound-toggle-btn {
+        grid-column: 3;
+        grid-row: 1;
+        min-height: 32px;
+        padding: 4px 7px;
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    .club-info .name {
+        font-size: 17px;
+        line-height: 1.15;
+    }
+
+    .club-info .league {
+        font-size: 9px;
+        letter-spacing: .06em;
+        line-height: 1.1;
+    }
+
+    .stats-bar {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 4px;
+        overflow: hidden;
+    }
+
+    .stat-pill {
+        justify-content: center;
+        min-width: 0;
+        padding: 3px 4px !important;
+        gap: 4px;
+        border-radius: 5px !important;
+    }
+
+    .stat-pill .label {
+        font-size: 8px;
+        letter-spacing: 0;
+    }
+
+    .stat-pill .value {
+        font-size: 13px;
+    }
+
+    #g-rep-pill {
+        display: none;
+    }
+
+    .tab-bar {
+        grid-column: 1;
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-auto-rows: minmax(34px, auto);
+        gap: 2px;
+        overflow: visible;
+        padding: 4px 5px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .tab-btn {
+        min-width: 0;
+        width: 100%;
+        min-height: 34px;
+        justify-content: center;
+        gap: 2px;
+        padding: 4px 2px !important;
+        border: 1px solid transparent;
+        border-radius: 5px !important;
+        font-size: 9px !important;
+        line-height: 1.1;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .tab-btn.active {
+        border-color: rgba(0, 210, 255, .4) !important;
+        border-left-width: 1px !important;
+    }
+
+    .tab-btn svg {
+        width: 14px;
+        height: 14px;
+        flex: 0 0 14px;
+    }
+
+    .tab-content,
+    .tab-content.active {
+        grid-column: 1;
+        grid-row: 3;
+        min-height: 0;
+        padding: 12px 10px 14px;
+    }
+
+    #cc-news {
+        grid-column: 1;
+        grid-row: 4;
+        height: 88px;
+        max-height: 88px;
+        border-top: 1px solid var(--border);
+    }
+
+    .nw-head {
+        padding: 2px 9px;
+    }
+
+    .nw-head h3 {
+        font-size: 14px;
+    }
+
+    .nw-head button {
+        font-size: 10px;
+    }
+
+    .nw-filters {
+        display: none;
+    }
+
+    .nw-list {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 6px;
+        padding: 2px 8px 5px;
+    }
+
+    .nw {
+        flex: 0 0 min(230px, 68vw);
+        overflow: hidden;
+        padding: 4px 7px;
+    }
+
+    .nw-meta {
+        font-size: 8px;
+    }
+
+    .nw h4 {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 13px;
+    }
+
+    .nw p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        font-size: 10px;
+    }
+
+    .cc-dock {
+        grid-column: 1;
+        grid-row: 5;
+        position: relative;
+        bottom: auto;
+        gap: 7px;
+        min-height: 52px;
+        padding: 5px 8px;
+    }
+
+    .cc-date {
+        min-width: 92px;
+    }
+
+    .cc-date b {
+        font-size: 17px;
+    }
+
+    .cc-date span {
+        font-size: 9px;
+    }
+
+    .cc-next {
+        display: none;
+    }
+
+    .cc-day {
+        padding: 7px 8px;
+        font-size: 12px;
+    }
+
+    .cc-go {
+        padding: 7px 12px;
+        font-size: 15px;
+        white-space: nowrap;
+    }
+
+    .section-title {
+        gap: 6px;
+        margin-bottom: 12px;
+        font-size: 16px;
+    }
+
+    .hero {
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+
+    .hero-vs {
+        gap: 5px;
+        margin: 8px 0;
+    }
+
+    .hero-vs b {
+        font-size: 17px;
+    }
+
+    .hero-vs strong {
+        font-size: 25px;
+    }
+
+    .home-grid {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    .stats-bar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tab-bar {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .cc-date {
+        min-width: 78px;
+    }
+
+    .cc-day {
+        font-size: 11px;
+    }
+
+    .cc-go {
+        padding: 7px 8px;
+        font-size: 13px;
+    }
+}
+
+@media (max-height: 700px) and (min-width: 641px) {
+    #s-menu.active {
+        gap: 4px 16px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+
+    .menu-hero {
+        padding-bottom: 0;
+    }
+
+    .logo-ball {
+        width: 34px;
+        height: 34px;
+        margin-bottom: 2px;
+    }
+
+    .logo-title {
+        font-size: 28px;
+    }
+
+    .logo-sub {
+        margin-top: 2px;
+        padding-top: 2px;
+    }
+
+    .menu-form-card {
+        gap: 6px 12px;
+        padding: 10px;
+    }
+
+    .menu-form-card .select-group label {
+        margin-bottom: 3px;
+    }
+
+    .club-search {
+        min-height: 32px;
+        margin-bottom: 4px;
+        padding: 5px 8px;
+    }
+
+    .club-card {
+        padding: 4px;
+    }
+
+    .club-card-crest {
+        height: 25px;
+        margin-bottom: 2px;
+    }
+
+    .save-slot {
+        min-height: 64px;
+        padding: 5px 8px;
+    }
+}
+
+@media (max-height: 680px) and (max-width: 640px) {
+    #s-menu.active {
+        gap: 5px;
+        padding-top: 5px;
+    }
+
+    .menu-form-card {
+        gap: 5px;
+        padding: 9px;
+    }
+
+    .club-grid {
+        max-height: 32dvh;
+    }
+
+    .save-slot {
+        min-height: 56px;
+        padding: 5px 3px;
+    }
+
+    #s-game.active {
+        grid-template-rows: auto auto minmax(0, 1fr) minmax(0, 68px) auto;
+    }
+
+    .nw h4 {
+        font-size: 12px;
+    }
+
+    .cc-dock {
+        min-height: 46px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+    }
+}
+
+@media (max-height: 600px) and (max-width: 640px) {
+    #s-menu.active {
+        gap: 4px;
+        padding: 4px 8px 6px;
+    }
+
+    .menu-hero {
+        padding-bottom: 1px;
+    }
+
+    .logo-ball {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 1px;
+    }
+
+    .logo-title {
+        font-size: 23px;
+    }
+
+    .logo-sub {
+        margin-top: 2px;
+        padding-top: 2px;
+    }
+
+    .menu-form-card {
+        gap: 4px;
+        padding: 8px;
+    }
+
+    .club-grid {
+        max-height: 24dvh;
+    }
+
+    .saves-section-title {
+        font-size: 9px;
+        margin-bottom: 3px;
+    }
+
+    .save-slot {
+        min-height: 54px;
+        padding: 3px 2px;
+    }
+
+    .save-slot-icon {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .save-slot-club,
+    .save-slot-season {
+        font-size: 8px;
+        line-height: 1.1;
+    }
+}
+
+@media (max-height: 500px) and (max-width: 900px) {
+    #s-menu.active {
+        gap: 3px 10px;
+        padding: 4px 10px;
+    }
+
+    .menu-hero {
+        padding: 0 4px 2px;
+    }
+
+    .logo-ball {
+        width: 28px;
+        height: 28px;
+        margin-bottom: 1px;
+    }
+
+    .logo-title {
+        font-size: 24px;
+    }
+
+    .logo-sub {
+        margin-top: 1px;
+        padding-top: 1px;
+    }
+
+    .menu-form-card {
+        gap: 5px 8px;
+        padding: 7px;
+    }
+
+    .menu-form-card > .select-group:nth-of-type(2) > .club-search,
+    .menu-form-card > .select-group:nth-of-type(2) > .club-grid {
+        display: none !important;
+    }
+
+    .menu-form-card > .select-group:nth-of-type(2) > #clubSelect {
+        display: block !important;
+        width: 100%;
+        min-height: 38px;
+        padding: 7px 9px;
+        color: var(--text);
+        background-color: var(--panel3);
+        border: 1px solid var(--border2);
+        border-radius: var(--radius-sm);
+    }
+
+    .menu-actions {
+        gap: 5px;
+    }
+
+    .saves-section-title {
+        margin: 0 0 4px;
+    }
+
+    .save-slots-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 4px;
+    }
+
+    .save-slot {
+        min-height: 68px;
+        padding: 4px 2px;
+    }
+
+    #s-game.active {
+        grid-template-rows: auto auto minmax(64px, 1fr) minmax(0, 66px) auto;
+    }
+
+    .top-bar {
+        padding: 5px 9px !important;
+        gap: 6px;
+    }
+
+    .club-badge {
+        width: 32px;
+        height: 32px;
+    }
+
+    .club-info .name {
+        font-size: 16px;
+    }
+
+    .club-info .league {
+        font-size: 8px;
+    }
+
+    .stats-bar {
+        flex-wrap: nowrap;
+        gap: 3px;
+    }
+
+    .stat-pill {
+        padding: 3px 5px !important;
+    }
+
+    .tab-btn {
+        min-height: 30px;
+        padding: 4px !important;
+    }
+
+    #cc-news {
+        height: 66px;
+        max-height: 66px;
+    }
+
+    .nw-head {
+        padding: 1px 8px;
+    }
+
+    .nw-head h3 {
+        font-size: 13px;
+    }
+
+    .nw-list {
+        padding: 1px 7px 3px;
+    }
+
+    .nw {
+        padding: 3px 6px;
+    }
+
+    .nw p {
+        display: none;
+    }
+
+    .cc-dock {
+        min-height: 42px;
+        padding: 3px 8px;
+    }
+
+    .cc-date b {
+        font-size: 15px;
+    }
+
+    .cc-date span {
+        font-size: 8px;
+    }
+
+    .cc-day,
+    .cc-go {
+        padding: 5px 8px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .menu-hero *,
+    .club-card,
+    .tab-btn,
+    .nw {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Football Manager 2025-2026</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Barlow:wght@400;500;600&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media = 'all'">
+        <link rel="stylesheet" href="style.css?v=9">
+        <link rel="stylesheet" href="theme.css?v=3">
+        <link rel="stylesheet" href="pitch.css?v=1">
+        <link rel="stylesheet" href="career.css?v=2">
+        <link rel="stylesheet" href="responsive.css?v=2">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/7.2.3/css/flag-icons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="scouting.css">
+        <link rel="stylesheet" href="clubs.css">
+        <link rel="stylesheet" href="contracts.css">
+        <link rel="stylesheet" href="europe.css">
+    </head>
+    <body>
+        <div id="fg-root">
+            <div id="toast"></div>
+
+            <!-- =================== MENU SCREEN =================== -->
+            <div id="s-menu" class="screen active">
+                <div class="menu-hero">
+                    <span class="logo-ball" aria-hidden="true"></span>
+                    <div class="logo-title">FOOT<span>BALL</span> MANAGER</div>
+                    <div class="logo-sub">Saison 2025 — 2026</div>
+                </div>
+
+                <div class="menu-form-card">
+                    <div class="select-group">
+                        <label for="leagueSelect">Championnat</label>
+                        <select id="leagueSelect" onchange="updateClubs()">
+                            <optgroup label="🏴󠁧󠁢󠁥󠁮󠁧󠁿 Angleterre">
+                                <option value="pl">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League</option>
+                                <option value="championship">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Championship</option>
+                            </optgroup>
+                            <optgroup label="🇫🇷 France">
+                                <option value="ligue1">🇫🇷 Ligue 1</option>
+                                <option value="ligue2">🇫🇷 Ligue 2</option>
+                            </optgroup>
+                            <optgroup label="🇩🇪 Allemagne">
+                                <option value="bl">🇩🇪 Bundesliga</option>
+                                <option value="bl2">🇩🇪 2. Bundesliga</option>
+                            </optgroup>
+                            <optgroup label="🇮🇹 Italie">
+                                <option value="seria">🇮🇹 Serie A</option>
+                                <option value="serib">🇮🇹 Serie B</option>
+                            </optgroup>
+                            <optgroup label="🇪🇸 Espagne">
+                                <option value="liga">🇪🇸 LaLiga</option>
+                                <option value="liga2">🇪🇸 LaLiga Hypermotion</option>
+                            </optgroup>
+                            <optgroup label="🇬🇷 Grèce">
+                                <option value="superleague_gr">🇬🇷 Stoiximan Super League</option>
+                            </optgroup>
+                            <optgroup label="🇦🇹 Autriche">
+                                <option value="bundesliga_at">🇦🇹 Admiral Bundesliga</option>
+                            </optgroup>
+                            <optgroup label="🏴󠁧󠁢󠁳󠁣󠁴󠁿 Écosse">
+                                <option value="premiership_sc">🏴󠁧󠁢󠁳󠁣󠁴󠁿 William Hill Premiership</option>
+                            </optgroup>
+                            <optgroup label="🇨🇭 Suisse">
+                                <option value="superleague_ch">🇨🇭 Credit Suisse Super League</option>
+                            </optgroup>
+                            <optgroup label="🇩🇰 Danemark">
+                                <option value="superliga_dk">🇩🇰 3F Superliga</option>
+                            </optgroup>
+                            <optgroup label="🇳🇴 Norvège">
+                                <option value="eliteserien_no">🇳🇴 Eliteserien</option>
+                            </optgroup>
+                            <optgroup label="🇸🇪 Suède">
+                                <option value="allsvenskan_se">🇸🇪 Allsvenskan</option>
+                            </optgroup>
+                            <optgroup label="🇵🇱 Pologne">
+                                <option value="ekstraklasa_pl">🇵🇱 PKO BP Ekstraklasa</option>
+                            </optgroup>
+                            <optgroup label="🇭🇷 Croatie">
+                                <option value="hnl_hr">🇭🇷 SuperSport HNL</option>
+                            </optgroup>
+                            <optgroup label="🇺🇦 Ukraine">
+                                <option value="liha_ua">🇺🇦 VBET Liha</option>
+                            </optgroup>
+                            <optgroup label="🇷🇸 Serbie">
+                                <option value="superliga_rs">🇷🇸 Mozzart Bet Superliga</option>
+                            </optgroup>
+                            <optgroup label="🇷🇴 Roumanie">
+                                <option value="superliga_ro">🇷🇴 SuperLiga</option>
+                            </optgroup>
+                            <optgroup label="🇵🇹 Portugal">
+                                <option value="liga_pt">🇵🇹 Liga Portugal Betclic</option>
+                            </optgroup>
+                            <optgroup label="🇳🇱 Pays-Bas">
+                                <option value="eredivisie_nl">🇳🇱 Eredivisie</option>
+                            </optgroup>
+                            <optgroup label="🇧🇪 Belgique">
+                                <option value="jupiler_be">🇧🇪 Jupiler Pro League</option>
+                            </optgroup>
+                            <optgroup label="🇹🇷 Turquie">
+                                <option value="superlig_tr">🇹🇷 Trendyol Süper Lig</option>
+                            </optgroup>
+                            <optgroup label="🇨🇿 Rép. Tchèque">
+                                <option value="chance_liga_cz">🇨🇿 Chance Liga</option>
+                            </optgroup>
+                            <optgroup label="🇮🇱 Israël">
+                                <option value="ligat_haal_il">🇮🇱 Ligat ha'Al</option>
+                            </optgroup>
+                            <optgroup label="🇨🇾 Chypre">
+                                <option value="cyta_cy">🇨🇾 Cyta Championship</option>
+                            </optgroup>
+                            <optgroup label="🇭🇺 Hongrie">
+                                <option value="otp_liga_hu">🇭🇺 OTP Bank Liga</option>
+                            </optgroup>
+                            <optgroup label="🇧🇬 Bulgarie">
+                                <option value="efbet_liga_bg">🇧🇬 efbet Liga</option>
+                            </optgroup>
+                            <optgroup label="🇸🇰 Slovaquie">
+                                <option value="nike_liga_sk">🇸🇰 Niké Liga</option>
+                            </optgroup>
+                            <optgroup label="🇦🇿 Azerbaïdjan">
+                                <option value="premyer_az">🇦🇿 Misli Premyer Liqası</option>
+                            </optgroup>
+                            <optgroup label="🇸🇮 Slovénie">
+                                <option value="prvaliga_si">🇸🇮 PrvaLiga Telemach</option>
+                            </optgroup>
+                            <optgroup label="🇮🇪 Irlande">
+                                <option value="sse_ie">🇮🇪 SSE Airtricity Premier Division</option>
+                            </optgroup>
+                            <optgroup label="🇫🇮 Finlande">
+                                <option value="veikkausliiga_fi">🇫🇮 Veikkausliiga</option>
+                            </optgroup>
+                            <optgroup label="🇮🇸 Islande">
+                                <option value="urvalsdeild_is">🇮🇸 Besta deild karla</option>
+                            </optgroup>
+                            <optgroup label="🇦🇱 Albanie">
+                                <option value="superiore_al">🇦🇱 Abissnet Superiore</option>
+                            </optgroup>
+                            <optgroup label="🇱🇺 Luxembourg">
+                                <option value="bgl_lu">🇱🇺 BGL Ligue</option>
+                            </optgroup>
+                            <optgroup label="🇦🇩 Andorre">
+                                <option value="primera_ad">🇦🇩 Primera Divisió</option>
+                            </optgroup>
+                            <optgroup label="🇬🇮 Gibraltar">
+                                <option value="gfl_gi">🇬🇮 Gibraltar Football League</option>
+                            </optgroup>
+                            <optgroup label="🇸🇲 Saint-Marin">
+                                <option value="campionato_sm">🇸🇲 Campionato Sammarinese</option>
+                            </optgroup>
+                            <optgroup label="🏴󠁧󠁢󠁷󠁬󠁳󠁿 Pays de Galles">
+                                <option value="cymru_prem_wls">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Cymru Premier</option>
+                            </optgroup>
+                            <optgroup label="🇬🇧 Irlande du Nord">
+                                <option value="nifl_nir">🇬🇧 NIFL Premiership</option>
+                            </optgroup>
+                            <optgroup label="🇧🇦 Bosnie-Herzégovine">
+                                <option value="premijer_ba">🇧🇦 Premijer Liga BiH</option>
+                            </optgroup>
+                            <optgroup label="🇲🇰 Macédoine du Nord">
+                                <option value="1mfl_mk">🇲🇰 1. MFL</option>
+                            </optgroup>
+                            <optgroup label="🇲🇪 Monténégro">
+                                <option value="1cfl_me">🇲🇪 1. CFL</option>
+                            </optgroup>
+                            <optgroup label="🇬🇪 Géorgie">
+                                <option value="crystalbet_ge">🇬🇪 Erovnuli Liga</option>
+                            </optgroup>
+                            <optgroup label="🇦🇲 Arménie">
+                                <option value="premier_am">🇦🇲 IDBank Premier League</option>
+                            </optgroup>
+                            <optgroup label="🇰🇿 Kazakhstan">
+                                <option value="premier_kz">🇰🇿 QFL Premier League</option>
+                            </optgroup>
+                            <optgroup label="🇲🇩 Moldavie">
+                                <option value="super_liga_md">🇲🇩 Super Liga</option>
+                            </optgroup>
+                            <optgroup label="🇧🇾 Biélorussie">
+                                <option value="vysheyshaya_by">🇧🇾 Vysheyshaya Liga</option>
+                            </optgroup>
+                            <optgroup label="🇪🇪 Estonie">
+                                <option value="premium_liiga_ee">🇪🇪 Premium Liiga</option>
+                            </optgroup>
+                            <optgroup label="🇱🇻 Lettonie">
+                                <option value="virsliga_lv">🇱🇻 Tonybet Virslīga</option>
+                            </optgroup>
+                            <optgroup label="🇱🇹 Lituanie">
+                                <option value="alyga_lt">🇱🇹 TOPsport A Lyga</option>
+                            </optgroup>
+                            <optgroup label="🇫🇴 Îles Féroé">
+                                <option value="betrideildin_fo">🇫🇴 Betri deildin</option>
+                            </optgroup>
+                            <optgroup label="🇲🇹 Malte">
+                                <option value="premier_mt">🇲🇹 360Sports Malta Premier</option>
+                            </optgroup>
+                            <optgroup label="🇽🇰 Kosovo">
+                                <option value="superliga_xk">🇽🇰 AlbiMall Superliga</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="select-group">
+                        <label id="clubPickerLabel">Club</label>
+                        <input class="club-search" id="clubSearch" type="search" placeholder="Rechercher un club…" aria-label="Rechercher un club" oninput="filterClubs()" autocomplete="off">
+                        <div class="club-grid" id="clubGrid" role="group" aria-labelledby="clubPickerLabel"></div>
+                        <select id="clubSelect" style="display:none" aria-label="Choisir un club" onchange="renderClubGrid()"></select>
+                    </div>
+
+                    <div class="menu-actions">
+                        <button class="btn-start" onclick="startNewGame()">▶ Nouvelle Partie</button>
+                        <button class="btn-outline" onclick="toggleLoadPanel()" aria-label="Charger une sauvegarde">📂</button>
+                    </div>
+                </div><!-- /menu-form-card -->
+
+                <div class="saves-section">
+                    <div class="saves-section-title">Emplacements de sauvegarde</div>
+                    <div class="save-slots-grid" id="menuSlots"></div>
+
+                    <div class="load-panel" id="loadPanel">
+                        <div class="load-panel-title">Choisir un emplacement à charger :</div>
+                        <div class="save-slots-grid" id="loadSlots"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- =================== GAME SCREEN =================== -->
+            <div id="s-game" class="screen">
+
+                <!-- Top bar -->
+                <div class="top-bar">
+                    <div class="club-badge" id="g-badge">⚽</div>
+                    <div class="club-info">
+                        <div class="name" id="g-club-name">Club</div>
+                        <div class="league" id="g-league-name">Ligue</div>
+                    </div>
+                    <div class="stats-bar">
+                        <div class="stat-pill money">
+                            <span class="label">Budget</span>
+                            <span class="value" id="g-money">0 €</span>
+                        </div>
+                        <div class="stat-pill pts">
+                            <span class="label">Points</span>
+                            <span class="value" id="g-pts">0</span>
+                        </div>
+                        <div class="stat-pill">
+                            <span class="label">Rang</span>
+                            <span class="value" id="g-rank">-</span>
+                        </div>
+                        <div class="stat-pill season">
+                            <span class="label">Journée</span>
+                            <span class="value" id="g-day">0/38</span>
+                        </div>
+                        <div class="stat-pill" id="g-rep-pill">
+                            <span class="label">Réputation</span>
+                            <span class="value" id="g-rep">⭐</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab bar -->
+                <div class="tab-bar" role="tablist" aria-label="Navigation de la carrière">
+                    <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-match" onclick="showTab('match', this)">⚽ Match</button>
+                    <button class="tab-btn" onclick="showTab('squad', this)">👥 Effectif</button>
+                                        <button class="tab-btn" onclick="showTab('transfers', this)">🔄 Transferts</button>
+                    <button class="tab-btn" onclick="showTab('clubs', this)">🏢 Clubs</button>
+                    <button class="tab-btn" onclick="showTab('standings', this)">🏆 Classement</button>
+                    <button class="tab-btn" onclick="showTab('europe', this)" id="tab-btn-europe">🌍 Europe</button>
+                    <button class="tab-btn" onclick="showTab('calendrier', this)">📅 Calendrier</button>
+                    <button class="tab-btn" onclick="showTab('upgrades', this)">⬆️ Améliorations</button>
+                    <button class="tab-btn" onclick="showTab('formation', this)">🎓 Formation</button>
+                    <button class="tab-btn" onclick="showTab('stade', this)">🏟️ Stade</button>
+                    <button class="tab-btn" onclick="showTab('staff', this)">👔 Staff</button>
+                    <button class="tab-btn" onclick="showTab('dashboard', this)">📊 Stats</button>
+                    <button class="tab-btn" onclick="showTab('contrats', this)">📋 Contrats</button>
+                    <button class="tab-btn" onclick="showTab('save', this)">💾 Sauvegarder</button>
+                </div>
+
+                <!-- TAB: MATCH -->
+                <div id="tab-match" class="tab-content active">
+
+                    <!-- OBJECTIVE BANNER -->
+                    <div class="objective-banner" id="obj-banner">
+                        <div class="obj-icon">🎯</div>
+                        <div class="obj-text">Objectif du board : <strong id="obj-text">—</strong></div>
+                        <div class="obj-badge" id="obj-badge">En cours</div>
+                    </div>
+
+                    <!-- MORALE -->
+                    <div class="morale-row">
+                        <span class="morale-label">🧠 Moral</span>
+                        <div class="morale-bar-bg"><div class="morale-bar" id="morale-bar"></div></div>
+                        <span class="morale-val" id="morale-val">—</span>
+                    </div>
+
+                    <!-- VESTIAIRE MESSAGE -->
+                    <div class="vestiaire-msg" id="vestiaire-msg"></div>
+
+                    <!-- TACTICS -->
+                    <div class="tactics-bar">
+                        <span class="tactics-label">⚙️ Tactique :</span>
+                        <button class="tactic-btn active" onclick="setTactic('4-3-3', this)">4-3-3</button>
+                        <button class="tactic-btn" onclick="setTactic('4-4-2', this)">4-4-2</button>
+                        <button class="tactic-btn" onclick="setTactic('3-5-2', this)">3-5-2</button>
+                        <button class="tactic-btn" onclick="setTactic('5-3-2', this)">5-3-2</button>
+                        <button class="tactic-btn" onclick="setTactic('4-2-3-1', this)">4-2-3-1</button>
+                    </div>
+
+                    <!-- PRE-MATCH STYLE -->
+                    <div class="prematch-panel" id="prematch-panel">
+                        <div class="prematch-title">🎮 Instructions avant le match</div>
+                        <div class="style-btns">
+                            <button class="style-btn equilibre active" id="style-btn-equilibre" onclick="setStyle('equilibre', this)">⚖️ Équilibré<br><small style="font-size:9px;opacity:0.6">Standard</small></button>
+                            <button class="style-btn offensif" id="style-btn-offensif" onclick="setStyle('offensif', this)">⚔️ Offensif<br><small style="font-size:9px;opacity:0.6">+Buts, +Encaissés</small></button>
+                            <button class="style-btn defensif" id="style-btn-defensif" onclick="setStyle('defensif', this)">🛡️ Défensif<br><small style="font-size:9px;opacity:0.6">-Encaissés, -Occasions</small></button>
+                            <button class="style-btn pressing" id="style-btn-pressing" onclick="setStyle('pressing', this)">⚡ Pressing<br><small style="font-size:9px;opacity:0.6">+Récup, +Fatigue</small></button>
+                        </div>
+                    </div>
+
+                    <div class="season-progress">
+                        <div class="sp-label">
+                            <span>Progression de la saison</span>
+                            <span id="prog-label">0 / 38 matchs</span>
+                        </div>
+                        <div class="sp-bar-bg">
+                            <div class="sp-bar" id="prog-bar" style="width:0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="match-arena">
+                        <svg class="pitch-lines" viewBox="0 0 800 260" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="1" y="1" width="798" height="258" fill="none" stroke="white" stroke-width="2"/>
+                        <line x1="400" y1="0" x2="400" y2="260" stroke="white" stroke-width="2"/>
+                        <circle cx="400" cy="130" r="55" fill="none" stroke="white" stroke-width="2"/>
+                        <circle cx="400" cy="130" r="3" fill="white"/>
+                        <rect x="0" y="80" width="90" height="100" fill="none" stroke="white" stroke-width="2"/>
+                        <rect x="710" y="80" width="90" height="100" fill="none" stroke="white" stroke-width="2"/>
+                        <rect x="0" y="105" width="30" height="50" fill="none" stroke="white" stroke-width="2"/>
+                        <rect x="770" y="105" width="30" height="50" fill="none" stroke="white" stroke-width="2"/>
+                        <circle cx="90" cy="130" r="3" fill="white"/>
+                        <circle cx="710" cy="130" r="3" fill="white"/>
+                        </svg>
+                        <div class="match-teams">
+                            <div class="team-side">
+                                <div class="team-name" id="m-home">—</div>
+                                <div class="team-rating" id="m-home-rat">Force: —</div>
+                            </div>
+                            <div class="match-vs">VS</div>
+                            <div class="team-side">
+                                <div class="team-name" id="m-away">—</div>
+                                <div class="team-rating" id="m-away-rat">Force: —</div>
+                            </div>
+                        </div>
+                        <div class="score-display" id="m-score">– : –</div>
+                        <div class="match-status" id="m-status">Prêt pour le coup d'envoi</div>
+                    </div>
+
+                    <div class="match-log" id="match-log">
+                        <div style="color:var(--muted);font-size:12px;text-align:center;padding:20px 0;">Le journal du match apparaîtra ici...</div>
+                    </div>
+
+                    <!-- MID-MATCH INTERVENTION -->
+                    <div class="halftime-panel" id="halftime-panel">
+                        <div class="halftime-title">⏱ 45' — Intervention du coach</div>
+                        <div style="font-size:12px;color:var(--muted);margin-bottom:10px;">Score actuel : <span id="ht-score">—</span> — Que faites-vous ?</div>
+                        <div class="halftime-btns">
+                            <button class="halftime-btn" id="ht-btn-push" onclick="halftimeChoice('push')">⚔️ Tout donner — Risquer défensivement pour marquer</button>
+                            <button class="halftime-btn" id="ht-btn-hold" onclick="halftimeChoice('hold')">🛡️ Gérer le résultat — Préserver le score</button>
+                            <button class="halftime-btn" id="ht-btn-change" onclick="halftimeChoice('change')">🔄 Remplacements — Jambes fraîches, ajustés au score</button>
+                        </div>
+                    </div>
+
+                    <button class="play-btn" id="playBtn" onclick="playMatch()">Coup d'envoi ▶</button>
+
+                    <div class="results-section">
+                        <div class="results-section-label">Derniers résultats</div>
+                        <div class="results-list" id="results-history"></div>
+                    </div>
+
+                    <div class="top-scorers" id="top-scorers-box">
+                        <div class="top-scorers-title">⚽ Meilleurs buteurs de la saison</div>
+                        <div id="top-scorers-list"></div>
+                    </div>
+                </div>
+
+                <!-- TAB: SQUAD -->
+                <div id="tab-squad" class="tab-content">
+                    <div class="section-title">
+                        Effectif
+                        <span id="squad-count"></span>
+                    </div>
+
+                    <!-- SQUAD VIEW TOGGLE -->
+                    <div class="squad-view-toggle">
+                        <button class="squad-view-btn active" id="btn-view-lineup" onclick="setSquadView('lineup')">🟢 Composition</button>
+                        <button class="squad-view-btn" id="btn-view-bench" onclick="setSquadView('bench')">📋 Effectif complet</button>
+                    </div>
+
+                    <!-- LINEUP PITCH VIEW -->
+                    <div id="squad-lineup-view">
+                        <div class="lineup-hint">💡 Glisse les joueurs pour les repositionner sur le terrain ou les mettre sur le banc</div>
+                        <div class="lineup-container">
+                            <!-- PITCH -->
+                            <div class="lineup-pitch" id="lineup-pitch">
+                                <div class="pitch-bg-lines">
+                                    <div class="pitch-line pitch-center-line"></div>
+                                    <div class="pitch-circle pitch-center-circle"></div>
+                                    <div class="pitch-box pitch-box-top"></div>
+                                    <div class="pitch-box pitch-box-bottom"></div>
+                                    <div class="pitch-small-box pitch-small-box-top"></div>
+                                    <div class="pitch-small-box pitch-small-box-bottom"></div>
+                                </div>
+                                <div class="pitch-label-top">ATT</div>
+                                <div class="pitch-label-mid">MIL</div>
+                                <div class="pitch-label-def">DEF</div>
+                                <div class="pitch-slots" id="pitch-slots">
+                                    <!-- Slots GK, DEF, MID, ATT generated by JS -->
+                                </div>
+                            </div>
+                            <!-- BENCH -->
+                            <div class="bench-zone" id="bench-zone">
+                                <div class="bench-title">🪑 Banc de touche</div>
+                                <div class="bench-slots" id="bench-slots"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GRID VIEW -->
+                    <div id="squad-grid-view" style="display:none;">
+                        <div class="squad-grid" id="squad-grid"></div>
+                    </div>
+                </div>
+
+                <!-- TAB: TRANSFERS -->
+                <div id="tab-transfers" class="tab-content">
+                    <div class="transfers-header">
+                        <div class="section-title" style="margin:0;">Marché des transferts</div>
+                        <button class="refresh-btn" onclick="refreshMarket()">↻ Actualiser le marché</button>
+                    </div>
+                    <div class="transfer-market" id="transfer-market"></div>
+                </div>
+
+                                <!-- TAB: CLUBS -->
+                <div id="tab-clubs" class="tab-content">
+                    <div id="clubs-content"></div>
+                </div>
+
+                <!-- TAB: STANDINGS -->
+                <div id="tab-standings" class="tab-content">
+                    <!-- Sub-tabs -->
+                    <div class="standings-subtabs">
+                        <button class="standings-subtab active" id="stab-my" onclick="switchStandingsTab('my')">🏆 Mon championnat</button>
+                        <button class="standings-subtab" id="stab-world" onclick="switchStandingsTab('world')">🌍 Autres ligues</button>
+                    </div>
+
+                    <!-- MY LEAGUE -->
+                    <div id="standings-my-panel">
+                        <div class="section-title" id="standings-my-title">Classement</div>
+                        <table class="standings-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Club</th>
+                                    <th>MJ</th>
+                                    <th>V</th>
+                                    <th>N</th>
+                                    <th>D</th>
+                                    <th>BP</th>
+                                    <th>BC</th>
+                                    <th>+/-</th>
+                                    <th>Pts</th>
+                                </tr>
+                            </thead>
+                            <tbody id="standings-body"></tbody>
+                        </table>
+                        <div class="legend" id="standings-legend"></div>
+                    </div>
+
+                    <!-- WORLD STANDINGS -->
+                    <div id="standings-world-panel" style="display:none;">
+                        <div class="world-standings-search">
+                            <input type="text" id="world-league-search" placeholder="🔍 Rechercher une ligue ou un club..." oninput="filterWorldStandings()" />
+                        </div>
+                        <div class="world-standings-countries" id="world-standings-countries"></div>
+                    </div>
+                </div>
+
+                <!-- TAB: EUROPE -->
+                <div id="tab-europe" class="tab-content">
+                    <div id="euro-content"></div>
+                </div>
+
+                <!-- TAB: CALENDRIER -->
+                <div id="tab-calendrier" class="tab-content">
+                    <div id="cal-content"></div>
+                </div>
+
+                <!-- TAB: UPGRADES -->
+                <div id="tab-upgrades" class="tab-content">
+                    <div class="section-title">
+                        Centre de développement
+                        <span>— Investissez dans votre club</span>
+                    </div>
+                    <div class="upgrade-grid" id="upgrade-grid"></div>
+                </div>
+
+                <!-- TAB: FORMATION -->
+                <div id="tab-formation" class="tab-content">
+                    <div id="formation-content"></div>
+                </div>
+
+                <!-- TAB: STADE -->
+                <div id="tab-stade" class="tab-content">
+                    <div id="stade-content"></div>
+                </div>
+
+                <!-- TAB: STAFF -->
+                <div id="tab-staff" class="tab-content">
+                    <div id="staff-content"></div>
+                </div>
+
+                <!-- TAB: DASHBOARD -->
+                <div id="tab-dashboard" class="tab-content">
+                    <div id="dashboard-content"></div>
+                </div>
+
+                <!-- TAB: CONTRATS -->
+                <div id="tab-contrats" class="tab-content">
+                    <div id="contrats-content"></div>
+                </div>
+
+                <!-- TAB: SAVE -->
+                <div id="tab-save" class="tab-content">
+                    <div class="section-title">Sauvegarde &amp; Paramètres</div>
+                    <div class="save-panel">
+                        <div style="font-size:12px;color:var(--muted);margin-bottom:10px;">Emplacement actif :</div>
+                        <div class="save-slot-picker" id="saveSlotPicker"></div>
+
+                        <div class="save-action-card">
+                            <div class="sa-icon">💾</div>
+                            <div class="sa-info">
+                                <div class="sa-title">Sauvegarder</div>
+                                <div class="sa-desc">Enregistre la progression dans l'emplacement sélectionné</div>
+                            </div>
+                            <button class="sa-btn green" onclick="saveGame()">Sauvegarder</button>
+                        </div>
+
+                        <div class="save-action-card">
+                            <div class="sa-icon">📤</div>
+                            <div class="sa-info">
+                                <div class="sa-title">Exporter en JSON</div>
+                                <div class="sa-desc">Télécharge un fichier de sauvegarde sur ton appareil</div>
+                            </div>
+                            <button class="sa-btn blue" onclick="exportSave()">Exporter</button>
+                        </div>
+
+                        <div class="save-action-card">
+                            <div class="sa-icon">📥</div>
+                            <div class="sa-info">
+                                <div class="sa-title">Importer un fichier</div>
+                                <div class="sa-desc">Charge une sauvegarde exportée depuis un fichier JSON</div>
+                            </div>
+                            <button class="sa-btn blue" onclick="document.getElementById('importFile').click()">Importer</button>
+                            <input type="file" id="importFile" accept=".json" style="display:none" onchange="importSave(event)">
+                        </div>
+
+                        <div class="save-action-card">
+                            <div class="sa-icon">🗑️</div>
+                            <div class="sa-info">
+                                <div class="sa-title">Effacer le slot</div>
+                                <div class="sa-desc">Supprime définitivement la sauvegarde de l'emplacement actif</div>
+                            </div>
+                            <button class="sa-btn red" onclick="deleteSlot()">Effacer</button>
+                        </div>
+
+                        <div class="save-action-card">
+                            <div class="sa-icon">🏠</div>
+                            <div class="sa-info">
+                                <div class="sa-title">Retour au menu</div>
+                                <div class="sa-desc">Pense à sauvegarder avant de quitter !</div>
+                            </div>
+                            <button class="sa-btn red" onclick="backToMenu()">Quitter</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /s-game -->
+
+            <!-- NARRATIVE EVENT MODAL -->
+            <div class="event-modal" id="event-modal" role="dialog" aria-modal="true" aria-labelledby="ev-title" style="display:none;">
+                <div class="event-card">
+                    <span class="event-emoji" id="ev-emoji">⚡</span>
+                    <div class="event-title" id="ev-title">Événement</div>
+                    <div class="event-desc" id="ev-desc"></div>
+                    <div class="event-choices" id="ev-choices"></div>
+                </div>
+            </div>
+
+            <!-- NEGOTIATION MODAL -->
+            <div class="event-modal" id="nego-modal" role="dialog" aria-modal="true" aria-labelledby="nego-title" style="display:none;">
+                <div class="event-card">
+                    <span class="event-emoji" id="nego-emoji">💰</span>
+                    <div class="event-title" id="nego-title">Négociation</div>
+                    <div class="event-desc" id="nego-desc"></div>
+                    <div class="nego-bar">
+                        <div class="nego-price-display" id="nego-price-display">—</div>
+                        <input type="range" class="nego-slider" id="nego-slider" min="0" max="100" value="50" oninput="updateNegoPrice(this.value)">
+                        <div class="nego-hint" id="nego-hint">Glissez pour ajuster votre offre</div>
+                    </div>
+                    <div class="event-choices">
+                        <button class="event-choice-btn gold" id="nego-confirm" onclick="confirmNego()">✓ Confirmer l'offre</button>
+                        <button class="event-choice-btn" onclick="closeNego()">✗ Annuler les négociations</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEASON SUMMARY MODAL -->
+            <div class="season-summary" id="season-summary" role="dialog" aria-modal="true" aria-labelledby="ss-title" style="display:none;">
+                <div class="season-card">
+                    <span class="season-card-emoji" id="ss-emoji">🏆</span>
+                    <div class="season-card-title" id="ss-title">Saison terminée</div>
+                    <div class="season-card-subtitle" id="ss-subtitle"></div>
+                    <div class="season-card-msg neutral" id="ss-msg"></div>
+                    <div class="season-stats-grid">
+                        <div class="season-stat">
+                            <div class="val" id="ss-pts" style="color:var(--accent)">0</div>
+                            <div class="lbl">Points</div>
+                        </div>
+                        <div class="season-stat">
+                            <div class="val" id="ss-rank" style="color:var(--accent2)">—</div>
+                            <div class="lbl">Classement</div>
+                        </div>
+                        <div class="season-stat">
+                            <div class="val" id="ss-gf" style="color:var(--gold)">0</div>
+                            <div class="lbl">Buts marqués</div>
+                        </div>
+                        <div class="season-stat">
+                            <div class="val" id="ss-wins">0</div>
+                            <div class="lbl">Victoires</div>
+                        </div>
+                        <div class="season-stat">
+                            <div class="val" id="ss-draws">0</div>
+                            <div class="lbl">Nuls</div>
+                        </div>
+                        <div class="season-stat">
+                            <div class="val" id="ss-losses">0</div>
+                            <div class="lbl">Défaites</div>
+                        </div>
+                    </div>
+                    <button class="season-card-btn" id="ss-btn" onclick="closeSummary()">Nouvelle saison ▶</button>
+                </div>
+            </div>
+
+            <!-- MODAL FICHE CLUB / STATS ET INFOS -->
+            <div class="event-modal" id="club-info-modal" role="dialog" aria-modal="true" aria-labelledby="cim-name" style="display:none;" onclick="if(event.target===this) closeClubModal()">
+                <div class="event-card" style="max-width:540px;text-align:left;">
+                    <div style="display:flex;align-items:center;gap:14px;margin-bottom:16px;">
+                        <div id="cim-crest" style="width:54px;height:54px;display:grid;place-items:center;"></div>
+                        <div style="flex:1;">
+                            <div id="cim-name" style="font-family:var(--num);font-size:24px;font-weight:700;"></div>
+                            <div id="cim-meta" style="color:var(--muted);font-size:13px;"></div>
+                        </div>
+                        <button class="pf-ic pf-x" onclick="closeClubModal()" style="margin-left:auto;" aria-label="Fermer la fiche du club">×</button>
+                    </div>
+
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;">
+                        <div style="background:var(--panel3);padding:10px;border-radius:var(--radius-sm);border:1px solid var(--border);">
+                            <div style="color:var(--muted);font-size:11px;text-transform:uppercase;">Stade</div>
+                            <div id="cim-stadium" style="font-weight:600;font-size:14px;margin-top:2px;"></div>
+                            <div id="cim-cap" style="color:var(--muted);font-size:12px;"></div>
+                        </div>
+                        <div style="background:var(--panel3);padding:10px;border-radius:var(--radius-sm);border:1px solid var(--border);">
+                            <div style="color:var(--muted);font-size:11px;text-transform:uppercase;">Ville & Fondation</div>
+                            <div id="cim-city" style="font-weight:600;font-size:14px;margin-top:2px;"></div>
+                            <div id="cim-founded" style="color:var(--muted);font-size:12px;"></div>
+                        </div>
+                    </div>
+
+                    <div style="background:var(--panel);border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px;margin-bottom:16px;">
+                        <div style="font-family:var(--num);font-size:13px;font-weight:700;letter-spacing:.03em;margin-bottom:10px;color:var(--text);">NOTES DE L'ÉQUIPE</div>
+                        <div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:8px;text-align:center;">
+                            <div style="background:var(--panel2);padding:8px;border-radius:4px;border:1px solid var(--border2);">
+                                <div id="cim-att" style="font-size:22px;font-weight:800;font-family:var(--num);color:var(--danger);">80</div>
+                                <div style="font-size:11px;color:var(--muted);">Attaque</div>
+                            </div>
+                            <div style="background:var(--panel2);padding:8px;border-radius:4px;border:1px solid var(--border2);">
+                                <div id="cim-mid" style="font-size:22px;font-weight:800;font-family:var(--num);color:var(--accent);">78</div>
+                                <div style="font-size:11px;color:var(--muted);">Milieu</div>
+                            </div>
+                            <div style="background:var(--panel2);padding:8px;border-radius:4px;border:1px solid var(--border2);">
+                                <div id="cim-def" style="font-size:22px;font-weight:800;font-family:var(--num);color:var(--accent2);">77</div>
+                                <div style="font-size:11px;color:var(--muted);">Défense</div>
+                            </div>
+                            <div style="background:var(--panel2);padding:8px;border-radius:4px;border:1px solid var(--border2);">
+                                <div id="cim-ovr" style="font-size:22px;font-weight:800;font-family:var(--num);color:var(--gold);">78</div>
+                                <div style="font-size:11px;color:var(--muted);">Général</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom:16px;">
+                        <div style="font-family:var(--num);font-size:13px;font-weight:700;letter-spacing:.03em;margin-bottom:8px;color:var(--text);">PALMARÈS DU CLUB</div>
+                        <div id="cim-trophies" style="display:flex;gap:10px;flex-wrap:wrap;"></div>
+                    </div>
+
+                    <div style="display:flex;justify-content:flex-end;">
+                        <button class="event-choice-btn" onclick="closeClubModal()">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /fg-root -->
+
+        <script src="script.js?v=13"></script>
+        <script src="joueur-data.js"></script>
+        <script src="clubs.js"></script>
+        <script src="contracts.js"></script>
+        <script src="scouting.js"></script>
+        <script src="europe.js"></script>
+        <script src="ai-world.js?v=4"></script>
+        <script src="playoffs.js?v=1"></script>
+        <script src="cup.js?v=3"></script>
+        <script src="career-depth.js?v=8"></script>
+        <script src="pitch.js"></script>
+        <script src="career.js?v=9"></script>
+        <script src="fiche.js"></script>
+        <script src="enhance.js?v=3"></script>
+    </body>
+</html>
